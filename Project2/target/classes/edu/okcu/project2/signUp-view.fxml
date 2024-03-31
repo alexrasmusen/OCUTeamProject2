@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="400" maxWidth="400" prefHeight="225.0" prefWidth="276.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.SignUpController">
+   <children>
+      <Label fx:id="lblSignUp" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" text="Name">
+         <graphic>
+            <TextField fx:id="txtfieldName" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblEmail" text="Email">
+         <graphic>
+            <TextField fx:id="txtfieldEmail" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblPassword" text="Password">
+         <graphic>
+            <TextField fx:id="txtfieldPassword" />
+         </graphic>
+      </Label>
+      <Button fx:id="buttonSignUp" mnemonicParsing="false" onAction="#onSecondSignUpButtonClick" text="Sign Up" />
+      <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+   </children>
+</VBox>

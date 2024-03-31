@@ -21,6 +21,7 @@ public class WelcomeController {
         Parent root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 400, 400);
+        Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
     }
@@ -29,6 +30,7 @@ public class WelcomeController {
         Parent root = FXMLLoader.load(getClass().getResource("signUp-view.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 400, 400);
+        Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
     }

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="375.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.ProfessorSignUpController">
+<AnchorPane prefHeight="375.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="$CONTROLLER_NAME$">
    <children>
       <Label fx:id="lblName" layoutX="73.0" layoutY="122.0" text="Name" />
       <TextField fx:id="txtfieldName" layoutX="72.0" layoutY="139.0" />
@@ -12,8 +12,8 @@
       <TextField fx:id="txtfieldEmail" layoutX="73.0" layoutY="181.0" />
       <Label fx:id="lblPassword" layoutX="73.0" layoutY="206.0" text="Password" />
       <TextField fx:id="txtfieldPassword" layoutX="73.0" layoutY="223.0" />
-      <Button fx:id="buttonSignUp" layoutX="118.0" layoutY="277.0" mnemonicParsing="false" onAction="#onProfessorSignUpButtonClick" text="Sign Up" />
-      <Button fx:id="buttonCancel" layoutX="121.0" layoutY="312.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+      <Button fx:id="buttonSignUp" layoutX="118.0" layoutY="277.0" mnemonicParsing="false" text="Sign Up" />
+      <Button fx:id="buttonCancel" layoutX="121.0" layoutY="312.0" mnemonicParsing="false" text="Cancel" />
       <VBox alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="117.0" prefWidth="280.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Professor Sign Up">

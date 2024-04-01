@@ -18,6 +18,8 @@ import java.util.Scanner;
 public class SignUpController {
 
     @FXML
+    public Button buttonSignUp;
+    @FXML
     private Label lblSignUp;
     @FXML
     private Label lblName;
@@ -41,7 +43,7 @@ public class SignUpController {
     String SignUpPassword;
 
 
-    String file = "SignUp.txt";
+    String file = "StudentSignUp.txt";
 
     //This is my method to open the SignUp FXML
     public void signUp(Stage stage) throws IOException {

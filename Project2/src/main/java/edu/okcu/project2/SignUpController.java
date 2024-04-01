@@ -2,23 +2,19 @@ package edu.okcu.project2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.mindrot.jbcrypt.BCrypt;
-import java.io.File;
+
 import java.io.IOException;
 import java.io.*;
-import java.util.Scanner;
+import java.util.UUID;
 
 
-public class SignUpController {
+public abstract class SignUpController {
 
-    @FXML
-    public Button buttonSignUp;
     @FXML
     private Label lblSignUp;
     @FXML
@@ -43,12 +39,8 @@ public class SignUpController {
     String SignUpPassword;
 
 
-    String file = "StudentSignUp.txt";
+    String file;
 
-    //This is my method to open the SignUp FXML
-    public void signUp(Stage stage) throws IOException {
-
-    }
 
     //Here is my method that controls what happens when the SignUp Button is cli
     public void onSecondSignUpButtonClick(ActionEvent actionEvent) throws IOException {
@@ -56,8 +48,11 @@ public class SignUpController {
         SignUpEmail = txtfieldEmail.getText();
         SignUpPassword = txtfieldPassword.getText();
         var hashedPassword = BCrypt.hashpw(SignUpPassword, BCrypt.gensalt(10));
+        String uniqueID = UUID.randomUUID().toString();
         
         FileWriter fw = new FileWriter(file, true);
+        fw.write(uniqueID);
+        fw.write(" , ");
         fw.write(SignUpName);
         fw.write(" , ");
         fw.write(SignUpEmail);

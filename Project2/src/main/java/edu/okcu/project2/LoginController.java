@@ -15,18 +15,12 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class LoginController {
+public abstract class LoginController {
 
     @FXML
-    private Label lblLogin;
+    private Label lblLogin, lblEmail, lblPassword;
     @FXML
-    private Label lblEmail;
-    @FXML
-    private Label lblPassword;
-    @FXML
-    private TextField txtfieldEmail;
-    @FXML
-    private TextField txtfieldPassword;
+    private TextField txtfieldEmail, txtfieldPassword;
     @FXML
     private Button buttonCancel;
     String LoginEmail;
@@ -69,6 +63,10 @@ public class LoginController {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
         }
-    }
+
+        public void setFile(File file) {
+        this.file = file;
+        }
+}
 
 

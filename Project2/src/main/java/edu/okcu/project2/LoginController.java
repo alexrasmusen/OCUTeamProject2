@@ -48,9 +48,10 @@ public class LoginController {
             var row = fileScanner.nextLine();
 
             var items = row.split(" , ");
-            var nameFromFile = items[0];
-            var emailFromFile = items[1];
-            var passwordFromFile = items[2];
+            var IDFromFile = items[0];
+            var nameFromFile = items[1];
+            var emailFromFile = items[2];
+            var passwordFromFile = items[3];
 
             var decryptedPass = BCrypt.checkpw(LoginPassword, passwordFromFile);
 

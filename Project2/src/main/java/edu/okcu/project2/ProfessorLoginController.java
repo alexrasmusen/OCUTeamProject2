@@ -1,6 +1,10 @@
 package edu.okcu.project2;
 
-public class ProfessorLoginController extends LoginController{
+import java.io.File;
 
+public class ProfessorLoginController extends LoginController {
 
+    public void onLoginPress() {
+        super.setFile(new File("Professors.txt"));
+    }
 }

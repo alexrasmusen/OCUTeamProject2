@@ -2,5 +2,8 @@ package edu.okcu.project2;
 
 public class ProfessorSignUpController extends SignUpController {
 
-    String file = "Professor.txt";
+    public void onSignUpClick() {
+        super.setFile("Professors.txt");
+    }
+
 }

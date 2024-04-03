@@ -13,23 +13,12 @@ import java.io.*;
 import java.util.UUID;
 
 
-public class SignUpController {
-//Sorry Luke It can not be an Abstract class it
-    //was causing the sign up button on the welcome page not to work
+public abstract class SignUpController {
+
     @FXML
-    private Label lblSignUp;
+    private Label lblSignUp, lblName, lblEmail, lblPassword;
     @FXML
-    private Label lblName;
-    @FXML
-    private Label lblEmail;
-    @FXML
-    private Label lblPassword;
-    @FXML
-    private TextField txtfieldName;
-    @FXML
-    private TextField txtfieldEmail;
-    @FXML
-    private TextField txtfieldPassword;
+    private TextField txtfieldName, txtfieldEmail, txtfieldPassword;
     @FXML
     private Button buttonCancel;
 
@@ -40,7 +29,7 @@ public class SignUpController {
     String SignUpPassword;
 
 
-    String file;
+    private String file = "";
 
 
     //Here is my method that controls what happens when the SignUp Button is cli
@@ -71,5 +60,10 @@ public class SignUpController {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
     }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
 
 }

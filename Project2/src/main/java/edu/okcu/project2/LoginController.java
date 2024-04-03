@@ -15,7 +15,7 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public abstract class LoginController {
+public class LoginController {
 
     @FXML
     private Label lblLogin, lblEmail, lblPassword;

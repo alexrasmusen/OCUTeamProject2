@@ -7,4 +7,5 @@ public class ProfessorLoginController extends LoginController {
     public void onLoginPress() {
         super.setFile(new File("Professors.txt"));
     }
+
 }

@@ -13,7 +13,7 @@ import java.io.*;
 import java.util.UUID;
 
 
-public abstract class SignUpController {
+public class SignUpController {
 
     @FXML
     private Label lblSignUp, lblName, lblEmail, lblPassword;

@@ -13,8 +13,9 @@ import java.io.*;
 import java.util.UUID;
 
 
-public abstract class SignUpController {
-
+public class SignUpController {
+//Sorry Luke It can not be an Abstract class it
+    //was causing the sign up button on the welcome page not to work
     @FXML
     private Label lblSignUp;
     @FXML

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="366.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.LoginController">
+<AnchorPane prefHeight="366.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.StudentLoginController">
    <children>
       <VBox alignment="CENTER" layoutX="4.0" layoutY="25.0" prefHeight="88.0" prefWidth="289.0">
          <children>
@@ -20,7 +20,7 @@
       <Label fx:id="lblEmail" layoutX="74.0" layoutY="169.0" text="Email" />
       <TextField fx:id="txtfieldEmail" layoutX="74.0" layoutY="188.0" />
       <Label fx:id="lblPassword" layoutX="74.0" layoutY="217.0" text="Password" />
-      <Button fx:id="buttonSignUp" layoutX="120.0" layoutY="281.0" mnemonicParsing="false" onAction="#onSecondLoginButtonClick" text="Sign Up" />
+      <Button fx:id="buttonSignUp" layoutX="120.0" layoutY="281.0" mnemonicParsing="false" onAction="#onLoginPress" text="Sign Up" />
       <Button fx:id="buttonCancel" layoutX="123.0" layoutY="316.0" mnemonicParsing="false" onAction="#onSecondCancelButtonClick" text="Cancel" />
       <PasswordField fx:id="txtfieldPassword" layoutX="75.0" layoutY="234.0" />
    </children>

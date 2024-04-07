@@ -26,13 +26,15 @@ public class LoginController {
     String LoginEmail;
     String LoginPassword;
 
+    String name, ID;
+
     File file;
 
     public void login(Stage stage) throws IOException {
 
     }
 
-    public void onSecondLoginButtonClick() throws FileNotFoundException {
+    public boolean onSecondLoginButtonClick() throws FileNotFoundException {
         LoginEmail = txtfieldEmail.getText();
         LoginPassword = txtfieldPassword.getText();
 
@@ -50,13 +52,15 @@ public class LoginController {
             var decryptedPass = BCrypt.checkpw(LoginPassword, passwordFromFile);
 
             if (LoginEmail.equals(emailFromFile) && decryptedPass) {
-                System.out.println("successfully logged in");
-                break;
+                setID(IDFromFile);
+                setName(nameFromFile);
+                return true;
             }
             else if(!fileScanner.hasNext()){
-                System.out.println("login failed");
+                return false;
             }
         }
+        return false;
     }
 
     public void setLblLogin(Label lblLogin) {
@@ -66,11 +70,26 @@ public class LoginController {
     public void onSecondCancelButtonClick(ActionEvent actionEvent) {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
-        }
+    }
 
-        public void setFile(String fileName) {
+    //getters and setters for stuff
+    public void setFile(String fileName) {
         file = new File(fileName);
-        }
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getID() {
+        return this.ID;
+    }
 }
 
 

@@ -20,7 +20,7 @@ public class ProfessorViewStudentsController{
     @FXML
     TableColumn<Person, String> gradeColumn;
     @FXML
-    TextField txtID;
+    Label lblID;
     @FXML
     TextField txtName;
     @FXML
@@ -49,7 +49,7 @@ public class ProfessorViewStudentsController{
         emailColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("email"));
         gradeColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("grade"));
 
-        people = Person.fakeData();
+
         tableView.setItems(people);
 
         TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
@@ -64,22 +64,20 @@ public class ProfessorViewStudentsController{
 
                 System.out.println(change.getList());
                 selectedPerson = change.getList().get(0);
-                txtID.setText(String.valueOf(selectedPerson.getID()));
+                lblID.setText(String.valueOf(selectedPerson.getID()));
                 txtEmail.setText(selectedPerson.getEmail());
                 txtName.setText(selectedPerson.getName());
-                txtGrade.setText(selectedPerson.getGrade());
             }
         });
     }
 
 
     public void onAddButtonClick(ActionEvent actionEvent){
-        var newPerson = new Person();
-        newPerson.setID(Integer.parseInt(txtID.getText()));
+        var newPerson = new Student();
+        newPerson.setID(lblID.getText());
         newPerson.setName(txtName.getText());
         newPerson.setEmail(txtEmail.getText());
-        newPerson.setGrade(txtGrade.getText());
-        if (newPerson == new Person()){
+        if (newPerson == new Student()){
             lblError.setText("Student Already added. Would you like to update?");
         } else {
             people.add(newPerson);
@@ -89,10 +87,9 @@ public class ProfessorViewStudentsController{
     public void onUpdateButtonClick(ActionEvent actionEvent){
         for (var record : people) {
             if (record.getID() == selectedPerson.getID()) {
-                record.setID(Integer.parseInt(txtID.getText()));
+                record.setID(lblID.getText());
                 record.setName(txtName.getText());
                 record.setEmail(txtEmail.getText());
-                record.setGrade(txtGrade.getText());
             }
         }
         tableView.refresh();
@@ -104,6 +101,12 @@ public class ProfessorViewStudentsController{
         } else {
             lblError.setText("Please select a student");
         }
+    }
+
+    public void onClearButtonClick(ActionEvent actionEvent){
+        txtName.setText("");
+        txtEmail.setText("");
+        txtGrade.setText("");
     }
 
     public void onReturnButtonClick(ActionEvent actionEvent){

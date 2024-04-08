@@ -4,6 +4,13 @@ import javafx.event.ActionEvent;
 
 public class ProfessorTableController {
 
+    Professor professor;
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+
+    }
+
     public void onAddButtonClick(ActionEvent actionEvent){
 
     }
@@ -19,5 +26,4 @@ public class ProfessorTableController {
     public void onAccessButtonClick(ActionEvent actionEvent){
 
     }
-
 }

@@ -4,11 +4,10 @@ import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
-public class ProfessorSignUpController extends SignUpController {
+public class StudentSignUpController extends SignUpController{
 
     public void onSignUpClick() throws IOException {
-        super.setFile("Professors.txt");
+        super.setFile("Students.txt");
         super.onSecondSignUpButtonClick();
     }
-
 }

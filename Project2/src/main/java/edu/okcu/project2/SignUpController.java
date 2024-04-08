@@ -13,22 +13,12 @@ import java.io.*;
 import java.util.UUID;
 
 
-public abstract class SignUpController {
+public class SignUpController {
 
     @FXML
-    private Label lblSignUp;
+    private Label lblSignUp, lblName, lblEmail, lblPassword;
     @FXML
-    private Label lblName;
-    @FXML
-    private Label lblEmail;
-    @FXML
-    private Label lblPassword;
-    @FXML
-    private TextField txtfieldName;
-    @FXML
-    private TextField txtfieldEmail;
-    @FXML
-    private TextField txtfieldPassword;
+    private TextField txtfieldName, txtfieldEmail, txtfieldPassword;
     @FXML
     private Button buttonCancel;
 
@@ -39,28 +29,24 @@ public abstract class SignUpController {
     String SignUpPassword;
 
 
-    String file;
+    private String file = "";
 
 
     //Here is my method that controls what happens when the SignUp Button is cli
-    public void onSecondSignUpButtonClick(ActionEvent actionEvent) throws IOException {
+    public void onSecondSignUpButtonClick() {
         SignUpName = txtfieldName.getText();
         SignUpEmail = txtfieldEmail.getText();
         SignUpPassword = txtfieldPassword.getText();
         var hashedPassword = BCrypt.hashpw(SignUpPassword, BCrypt.gensalt(10));
         String uniqueID = UUID.randomUUID().toString();
-        
-        FileWriter fw = new FileWriter(file, true);
-        fw.write(uniqueID);
-        fw.write(" , ");
-        fw.write(SignUpName);
-        fw.write(" , ");
-        fw.write(SignUpEmail);
-        fw.write(" , ");
-        fw.write(hashedPassword);
-        fw.write("\n");
 
-        fw.close();
+        try (FileWriter fw = new FileWriter(file, true)) {
+            fw.write(uniqueID + " , " + SignUpName + " , " + SignUpEmail + " , " + hashedPassword + "\n");
+        } catch (IOException e) {
+            e.printStackTrace(); // Print the stack trace for debugging
+            // Handle the IOException appropriately, e.g., show an error message to the user
+        }
+
 
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
@@ -70,5 +56,10 @@ public abstract class SignUpController {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
     }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
 
 }

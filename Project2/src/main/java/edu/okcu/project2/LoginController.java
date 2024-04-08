@@ -18,27 +18,23 @@ import java.util.Scanner;
 public class LoginController {
 
     @FXML
-    private Label lblLogin;
+    private Label lblLogin, lblEmail, lblPassword;
     @FXML
-    private Label lblEmail;
-    @FXML
-    private Label lblPassword;
-    @FXML
-    private TextField txtfieldEmail;
-    @FXML
-    private TextField txtfieldPassword;
+    private TextField txtfieldEmail, txtfieldPassword;
     @FXML
     private Button buttonCancel;
     String LoginEmail;
     String LoginPassword;
 
-    File file = new File("SignUp.txt");
+    String name, ID;
+
+    File file;
 
     public void login(Stage stage) throws IOException {
 
     }
 
-    public void onSecondLoginButtonClick(ActionEvent actionEvent) throws FileNotFoundException {
+    public boolean onSecondLoginButtonClick() throws FileNotFoundException {
         LoginEmail = txtfieldEmail.getText();
         LoginPassword = txtfieldPassword.getText();
 
@@ -56,19 +52,44 @@ public class LoginController {
             var decryptedPass = BCrypt.checkpw(LoginPassword, passwordFromFile);
 
             if (LoginEmail.equals(emailFromFile) && decryptedPass) {
-                lblLogin.setText("Welcome "+nameFromFile);
-                break;
+                setID(IDFromFile);
+                setName(nameFromFile);
+                return true;
             }
             else if(!fileScanner.hasNext()){
-                lblLogin.setText("Login Unsuccessful");
+                return false;
             }
         }
+        return false;
+    }
+
+    public void setLblLogin(Label lblLogin) {
+        this.lblLogin = lblLogin;
     }
 
     public void onSecondCancelButtonClick(ActionEvent actionEvent) {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
-        }
     }
+
+    //getters and setters for stuff
+    public void setFile(String fileName) {
+        file = new File(fileName);
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getID() {
+        return this.ID;
+    }
+}
 
 

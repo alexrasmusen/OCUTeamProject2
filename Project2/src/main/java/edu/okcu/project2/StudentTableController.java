@@ -1,10 +1,13 @@
 package edu.okcu.project2;
 
-import javafx.event.ActionEvent;
-
-
-
 public class StudentTableController {
+
+    Student student;
+
+    public void setStudent(Student student) {
+        this.student = student;
+
+    }
 
     public void onAddButtonClick(ActionEvent actionEvent){
 

@@ -8,7 +8,6 @@
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="40.0">
          <children>
-            <Separator prefWidth="200.0" />
             <Label text="Student ">
                <font>
                   <Font name="System Bold" size="24.0" />
@@ -20,7 +19,6 @@
       </VBox>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="40.0">
          <children>
-            <Separator prefWidth="200.0" />
             <Label text="Professor">
                <font>
                   <Font name="System Bold" size="24.0" />

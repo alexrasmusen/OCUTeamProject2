@@ -37,6 +37,11 @@ public abstract class Person {
         setEmail(email);
     }
 
+    public Person (String name, String ID) {
+        setName(name);
+        setID(ID);
+    }
+
     public Person(){
         this.ID="Null";
         this.name="Null";

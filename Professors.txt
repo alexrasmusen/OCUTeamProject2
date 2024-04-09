@@ -2,3 +2,4 @@ cd812b87-013e-47f6-8627-c76b1e838016 , 1 , 1 , $2a$10$qVoiNz7t90Vg0PEeNs9IKe7Svw
 62d5998f-62ec-4df3-b4ae-c4fb84dd019e , 1 , 1 , $2a$10$n6vIMtd6kFkI73cq7RfhAuvTSQAZTun9Oravf81hPMyMeP7UQzqC2
 a57f92d5-8ee9-4370-b090-0053f2cb46b6 , 2 , 2 , $2a$10$cB1dHLS32bXMhpHk3KurH.LCZoM.pXLAQhXFXC/CeZVc5l7/mnNVO
 6af172df-66f3-4b39-a321-8a9db522e73b , 3 , 3 , $2a$10$1XU7RD.1ntnSRA0G3TyKQ.gBVm1CgFmQMbvXwrZahTBMTrBfHRSgi
+8dfda694-2ddf-40f1-b15c-2d0ec6291bca , 3 , 3 , $2a$10$pZem.vBvw.HtX3xVMfnjPuaP3k7krHJKfGU8mboBplT8i7vucXyo.

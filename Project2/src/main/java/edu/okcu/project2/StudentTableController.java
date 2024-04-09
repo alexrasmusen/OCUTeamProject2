@@ -9,15 +9,15 @@ public class StudentTableController {
 
     }
 
-    public void onAddButtonClick(ActionEvent actionEvent){
+    public void onAddButtonClick(){
 
     }
 
-    public void onDeleteButtonClick(ActionEvent actionEvent){
+    public void onDeleteButtonClick(){
 
     }
 
-    public void onUpdateButtonClick(ActionEvent actionEvent){
+    public void onUpdateButtonClick(){
 
     }
 

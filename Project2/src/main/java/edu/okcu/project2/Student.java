@@ -7,6 +7,10 @@ public class Student extends Person {
     public Student(String ID, String name, String email) {
         super(ID, name, email);
     }
+    public Student(String name, String ID) {
+        setName(name);
+        setID(ID);
+    }
 
     public Student (){
         super();

@@ -67,7 +67,7 @@ public class LoginController {
         this.lblLogin = lblLogin;
     }
 
-    public void onSecondCancelButtonClick(ActionEvent actionEvent) {
+    public void onSecondCancelButtonClick() {
         Stage stage = (Stage) buttonCancel.getScene().getWindow();
         stage.close();
     }

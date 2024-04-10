@@ -28,6 +28,7 @@ public class StudentLoginController extends LoginController {
                 // we need an FXML loader. this will allow us to get the FXML file and the controller
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("student-view.fxml"));
                 Parent root = loader.load();
+                //open the student's view
                 StudentTableController controller = loader.getController();
                 controller.setStudent(student);
                 Stage stage = new Stage();
@@ -35,6 +36,9 @@ public class StudentLoginController extends LoginController {
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();
+
+                //close the login window
+                super.onSecondCancelButtonClick();
             }
 
 

@@ -26,6 +26,7 @@ public class ProfessorLoginController extends LoginController {
                 // we need an FXML loader. this will allow us to get the FXML file and the controller
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("professor-view.fxml"));
                 Parent root = loader.load();
+                //open up the professor's view
                 ProfessorTableController controller = loader.getController();
                 controller.setProfessor(professor);
                 Stage stage = new Stage();
@@ -33,6 +34,9 @@ public class ProfessorLoginController extends LoginController {
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();
+
+                //close login window
+                super.onSecondCancelButtonClick();
             }
         } catch (Exception e) {
             e.printStackTrace();

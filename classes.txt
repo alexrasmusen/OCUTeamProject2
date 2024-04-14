@@ -1,0 +1,5 @@
+{
+  "courseName": "fortnite",
+  "professor": "1",
+  "studentsMap": {}
+}

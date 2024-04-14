@@ -36,6 +36,7 @@ public class ProfessorTableController {
     public void onAddButtonClick(ActionEvent actionEvent){
         if (!txtFieldClass.getText().isEmpty()) {
             Course course = new Course(professor.getName(), txtFieldClass.getText());
+            JSONWriter.addCourse(course);
         }
     }
 

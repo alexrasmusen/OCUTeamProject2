@@ -1,11 +1,12 @@
 package edu.okcu.project2;
 
+
 import java.util.HashMap;
 
 public class Course {
-    String courseName;
-    String professor;
-    HashMap<String, String> studentsMap = new HashMap<>();
+    public String courseName;
+    public String professor;
+    public HashMap<String, String> studentsMap = new HashMap<>();
 
     public Course(String professor, String courseName) {
         setProfessor(professor);
@@ -35,5 +36,8 @@ public class Course {
     public String getGrade(String student) {
         return studentsMap.get(student);
     }
+
+
+
 
 }

@@ -13,21 +13,21 @@ public class ProfessorTableController {
     @FXML
     TableView professorTableview;
     @FXML
-    TableColumn<Person, Integer> classColumn;
+    TableColumn<Person, Integer> classColumn = new TableColumn<>();
     @FXML
-    TableColumn<Person, String> accessColumn;
+    TableColumn<Person, String> accessColumn = new TableColumn<>();
     @FXML
     Button accessButton;
     @FXML
     TextField txtFieldClass;
     @FXML
-    Button btnAdd;
+    Button btnAdd = new Button();
     @FXML
-    Button btnUpdate;
+    Button btnUpdate= new Button();
     @FXML
-    Button btnDelete;
+    Button btnDelete= new Button();
     @FXML
-    Button btnClear;
+    Button btnClear= new Button();
 
     String course1 = "";
     Professor professor;
@@ -49,6 +49,7 @@ public class ProfessorTableController {
     public void onAddButtonClick(ActionEvent actionEvent){
         if (!txtFieldClass.getText().isEmpty()) {
             Course course = new Course(professor.getName(), txtFieldClass.getText());
+            System.out.println(professor.getName());
             JSONWriter.addCourse(course);
         }
     }

@@ -5,3 +5,5 @@ a57f92d5-8ee9-4370-b090-0053f2cb46b6 , 2 , 2 , $2a$10$cB1dHLS32bXMhpHk3KurH.LCZo
 8dfda694-2ddf-40f1-b15c-2d0ec6291bca , 3 , 3 , $2a$10$pZem.vBvw.HtX3xVMfnjPuaP3k7krHJKfGU8mboBplT8i7vucXyo.
 3e1c3a1b-b581-4b3b-83fe-60d94710a62c , 3 , 3 , $2a$10$rPrEFiB0zsXWbfi88KeYeOzCDRL94frmvLRGkqMCi0hL2sW75zdY.
 bec9d860-4855-40e7-9526-7d443c41505e , 1 , 1 , $2a$10$zi5R6UpM.riH/2HhX9Qp9.y6Lia7H2R4xYWBz4qUPP2smn7pIRK1C
+18dc5bba-ee58-473e-9619-edf76bf0c859 , f , f , $2a$10$BbiLMNRoLG0epukGuURnAupXZJyTQWlVWuzVhX7nEltXfBQRxZ4Pi
+eb047d7d-f82b-440b-ac90-42e4289c22bc , d , d , $2a$10$sPpb5PU4/LuPFpCAZdGWpONpLX3VBLkztaoGof60fsBMhpmGFLgb2

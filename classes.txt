@@ -3,3 +3,38 @@
   "professor": "1",
   "studentsMap": {}
 }
+{
+  "courseName": "yemen",
+  "professor": "1",
+  "studentsMap": {}
+}
+{
+  "courseName": "fortnite",
+  "professor": "cd812b87-013e-47f6-8627-c76b1e838016",
+  "studentsMap": {}
+}
+{
+  "courseName": "ururguaufga",
+  "professor": "cd812b87-013e-47f6-8627-c76b1e838016",
+  "studentsMap": {}
+}
+{
+  "courseName": "taewtwea",
+  "professor": "18dc5bba-ee58-473e-9619-edf76bf0c859",
+  "studentsMap": {}
+}
+{
+  "courseName": "fjewaiofj",
+  "professor": "18dc5bba-ee58-473e-9619-edf76bf0c859",
+  "studentsMap": {}
+}
+{
+  "courseName": "feaw",
+  "professor": "cd812b87-013e-47f6-8627-c76b1e838016",
+  "studentsMap": {}
+}
+{
+  "courseName": "real class",
+  "professor": "d",
+  "studentsMap": {}
+}

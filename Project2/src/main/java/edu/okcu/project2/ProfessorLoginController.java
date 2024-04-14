@@ -21,6 +21,7 @@ public class ProfessorLoginController extends LoginController {
                 setName(super.getName());
 
 
+
                 //initialize a new student with the found name and ID
                 professor = new Professor(getName(), getID());
                 // we need an FXML loader. this will allow us to get the FXML file and the controller

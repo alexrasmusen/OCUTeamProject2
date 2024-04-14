@@ -1,13 +1,8 @@
 package edu.okcu.project2;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 public abstract class Person {
     String name, ID, email;
 
-    public Person(String name, String id) {
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -40,11 +35,10 @@ public abstract class Person {
         setEmail(email);
     }
 
-    public Person (String name, String ID) {
-        setName(name);
+    public Person (String ID, String name){
         setID(ID);
+        setName(name);
     }
-
     public Person(){
         this.ID="Null";
         this.name="Null";

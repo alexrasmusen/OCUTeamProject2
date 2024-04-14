@@ -9,7 +9,7 @@ public class StudentTableController {
 
     }
 
-    public void onAddButtonClick(ActionEvent actionEvent){
+    /*public void onAddButtonClick(ActionEvent actionEvent){
 
     }
 
@@ -19,6 +19,6 @@ public class StudentTableController {
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
 
-    }
+    }*/
 
 }

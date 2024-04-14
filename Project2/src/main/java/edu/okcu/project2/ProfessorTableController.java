@@ -13,18 +13,31 @@ public class ProfessorTableController {
     @FXML
     TableView professorTableview;
     @FXML
-    TableColumn<Person, Integer> classColumn = new TableColumn<>();
+    TableColumn<Person, Integer> classColumn;
     @FXML
-    TableColumn<Person, String> accessColumn = new TableColumn<>();
+    TableColumn<Person, String> accessColumn;
     @FXML
     Button accessButton;
     @FXML
     TextField txtFieldClass;
+    @FXML
+    Button btnAdd;
+    @FXML
+    Button btnUpdate;
+    @FXML
+    Button btnDelete;
+    @FXML
+    Button btnClear;
 
     String course1 = "";
     Professor professor;
 
     public void initialize () {
+        btnAdd.setDisable(false);
+        btnUpdate.setDisable(true);
+        btnDelete.setDisable(true);
+        btnClear.setDisable(true);
+
         classColumn.setCellValueFactory(new PropertyValueFactory<Person, Integer>("Classes"));
         accessColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("View"));
     }

@@ -6,8 +6,6 @@ import javafx.collections.ObservableList;
 public abstract class Person {
     String name, ID, email;
 
-    public Person(String name, String id) {
-    }
 
     public void setName(String name) {
         this.name = name;

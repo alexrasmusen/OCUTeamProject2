@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ProfessorTableController {
@@ -12,13 +13,15 @@ public class ProfessorTableController {
     @FXML
     TableView professorTableview;
     @FXML
-    TableColumn<Person, Integer> classColumn;
+    TableColumn<Person, Integer> classColumn = new TableColumn<>();
     @FXML
-    TableColumn<Person, String> accessColumn;
+    TableColumn<Person, String> accessColumn = new TableColumn<>();
     @FXML
     Button accessButton;
+    @FXML
+    TextField txtFieldClass;
 
-    String course = "";
+    String course1 = "";
     Professor professor;
 
     public void initialize () {
@@ -31,7 +34,9 @@ public class ProfessorTableController {
     }
 
     public void onAddButtonClick(ActionEvent actionEvent){
-
+        if (!txtFieldClass.getText().isEmpty()) {
+            Course course = new Course(professor.getName(), txtFieldClass.getText());
+        }
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){

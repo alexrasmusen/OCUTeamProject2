@@ -21,12 +21,12 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <TextField />
+            <TextField fx:id="txtFieldClass" />
          </children>
       </HBox>
       <HBox layoutX="120.0" layoutY="381.0" prefHeight="31.0" prefWidth="281.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
             <Button mnemonicParsing="false" text="Update" />
             <Button mnemonicParsing="false" text="Delete" />
             <Button mnemonicParsing="false" text="Clear" />

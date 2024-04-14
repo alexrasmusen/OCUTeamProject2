@@ -16,8 +16,7 @@ public class Student extends Person {
         super();
     }
 
-    public Student(String name, String id) {
-    }
+
 
     public ObservableList<Student> insertStudents(){
         ObservableList <Student> people = FXCollections.observableArrayList();

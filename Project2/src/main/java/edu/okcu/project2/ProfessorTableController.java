@@ -15,11 +15,11 @@ public class ProfessorTableController {
     @FXML
     TableColumn<Person, Integer> classColumn;
     @FXML
-    TableColumn<Person, String> viewColumn;
+    TableColumn<Person, String> accessColumn;
     @FXML
     Button accessButton;
     @FXML
-    TextField txtClass;
+    TextField txtFieldClass;
     @FXML
     Button btnAdd;
     @FXML
@@ -28,7 +28,8 @@ public class ProfessorTableController {
     Button btnDelete;
     @FXML
     Button btnClear;
-    String course = "";
+
+    String course1 = "";
     Professor professor;
 
     public void initialize () {
@@ -38,7 +39,7 @@ public class ProfessorTableController {
         btnClear.setDisable(true);
 
         classColumn.setCellValueFactory(new PropertyValueFactory<Person, Integer>("Classes"));
-        viewColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("View"));
+        accessColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("View"));
     }
     public void setProfessor(Professor professor) {
         this.professor = professor;
@@ -46,7 +47,9 @@ public class ProfessorTableController {
     }
 
     public void onAddButtonClick(ActionEvent actionEvent){
-
+        if (!txtFieldClass.getText().isEmpty()) {
+            Course course = new Course(professor.getName(), txtFieldClass.getText());
+        }
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
@@ -57,11 +60,7 @@ public class ProfessorTableController {
 
     }
 
-    public void onViewButtonClick(ActionEvent actionEvent){
-
-    }
-
-    public void onClearButtonClick(ActionEvent actionEvent){
+    public void onAccessButtonClick(ActionEvent actionEvent){
 
     }
 }

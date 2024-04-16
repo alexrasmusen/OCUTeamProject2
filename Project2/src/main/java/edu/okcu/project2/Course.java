@@ -4,9 +4,10 @@ package edu.okcu.project2;
 import java.util.HashMap;
 
 public class Course {
+    //for some reason, these have to be public or GSON struggles with writing them
     public String courseName;
     public String professor;
-    public HashMap<String, String> studentsMap = new HashMap<>();
+
 
     public Course(String professor, String courseName) {
         setProfessor(professor);
@@ -29,13 +30,7 @@ public class Course {
         return this.professor;
     }
 
-    public void addStudent(String student, String grade) {
-        studentsMap.put(student,grade);
-    }
 
-    public String getGrade(String student) {
-        return studentsMap.get(student);
-    }
 
 
 

@@ -11,11 +11,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class ProfessorTableController {
 
     @FXML
-    TableView professorTableview;
+    TableView professorTableview = new TableView<>();
     @FXML
-    TableColumn<Person, Integer> classColumn = new TableColumn<>();
+    TableColumn<Course, Integer> classColumn = new TableColumn<Course, Integer>();
     @FXML
-    TableColumn<Person, String> accessColumn = new TableColumn<>();
+    TableColumn<Person, String> accessColumn = new TableColumn<Person, String>();
     @FXML
     Button accessButton;
     @FXML
@@ -38,8 +38,11 @@ public class ProfessorTableController {
         btnDelete.setDisable(true);
         btnClear.setDisable(true);
 
-        classColumn.setCellValueFactory(new PropertyValueFactory<Person, Integer>("Classes"));
+        classColumn.setCellValueFactory(new PropertyValueFactory<Course, Integer>("courseName"));
         accessColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("View"));
+
+        professorTableview.getColumns().add(classColumn);
+
     }
     public void setProfessor(Professor professor) {
         this.professor = professor;
@@ -49,8 +52,9 @@ public class ProfessorTableController {
     public void onAddButtonClick(ActionEvent actionEvent){
         if (!txtFieldClass.getText().isEmpty()) {
             Course course = new Course(professor.getName(), txtFieldClass.getText());
-            System.out.println(professor.getName());
             JSONWriter.addCourse(course);
+            JSONWriter.updateTable(professorTableview, professor);
+            professorTableview.refresh();
         }
     }
 
@@ -65,4 +69,6 @@ public class ProfessorTableController {
     public void onAccessButtonClick(ActionEvent actionEvent){
 
     }
+
+
 }

@@ -34,30 +34,27 @@ public class LoginController {
 
     }
 
-    public boolean onSecondLoginButtonClick() throws FileNotFoundException {
+    public boolean onSecondLoginButtonClick() throws IOException {
         LoginEmail = txtfieldEmail.getText();
         LoginPassword = txtfieldPassword.getText();
 
+        //read in the contents of the file
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String row;
+            while ((row = reader.readLine()) != null) {
+                var items = row.split(" , ");
+                var IDFromFile = items[0];
+                var nameFromFile = items[1];
+                var emailFromFile = items[2];
+                var passwordFromFile = items[3];
 
-        Scanner fileScanner = new Scanner(file);
-        while (fileScanner.hasNext()) {
-            var row = fileScanner.nextLine();
-
-            var items = row.split(" , ");
-            var IDFromFile = items[0];
-            var nameFromFile = items[1];
-            var emailFromFile = items[2];
-            var passwordFromFile = items[3];
-
-            var decryptedPass = BCrypt.checkpw(LoginPassword, passwordFromFile);
-
-            if (LoginEmail.equals(emailFromFile) && decryptedPass) {
-                setID(IDFromFile);
-                setName(nameFromFile);
-                return true;
-            }
-            else if(!fileScanner.hasNext()){
-                return false;
+                var decryptedPass = BCrypt.checkpw(LoginPassword, passwordFromFile);
+                //check if the email and password are correct
+                if (LoginEmail.equals(emailFromFile) && decryptedPass) {
+                    setID(IDFromFile);
+                    setName(nameFromFile);
+                    return true;
+                }
             }
         }
         return false;

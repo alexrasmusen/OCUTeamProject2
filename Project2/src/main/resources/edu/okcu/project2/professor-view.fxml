@@ -9,8 +9,8 @@
       <Label layoutX="199.0" layoutY="14.0" text="Welcome Professor" />
       <TableView fx:id="professorTableview" layoutX="10.0" layoutY="63.0" prefHeight="219.0" prefWidth="483.0">
         <columns>
-          <TableColumn prefWidth="408.0" text="Classes" />
-            <TableColumn prefWidth="74.0" text="View" />
+           <TableColumn fx:id="classColumn" prefWidth="408.0" text="Classes" />
+            <!--<TableColumn prefWidth="74.0" text="View" />-->
         </columns>
       </TableView>
       <Label layoutX="110.0" layoutY="37.0" text="To view your students, select a class and press access" />

@@ -26,6 +26,10 @@ public class JSONWriter {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             //make a list of the existing courses
             List<Course> courses = readCourses();
+            //if the course already exists in the file, we will return. we do not want duplicate courses
+            if (courses.contains(course)) {
+                return;
+            }
             //add our new course to the list
             courses.add(course);
 

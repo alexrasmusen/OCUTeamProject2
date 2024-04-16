@@ -13,9 +13,7 @@ public class ProfessorTableController {
     @FXML
     TableView professorTableview = new TableView<>();
     @FXML
-    TableColumn<Course, Integer> classColumn = new TableColumn<Course, Integer>();
-    @FXML
-    TableColumn<Person, String> accessColumn = new TableColumn<Person, String>();
+    TableColumn<Course, String> classColumn = new TableColumn<Course, String>();
     @FXML
     Button accessButton;
     @FXML
@@ -38,18 +36,21 @@ public class ProfessorTableController {
         btnDelete.setDisable(true);
         btnClear.setDisable(true);
 
-        classColumn.setCellValueFactory(new PropertyValueFactory<Course, Integer>("courseName"));
-        accessColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("View"));
-
-        professorTableview.getColumns().add(classColumn);
+        classColumn.setCellValueFactory(new PropertyValueFactory<Course, String>("courseName"));
 
     }
     public void setProfessor(Professor professor) {
         this.professor = professor;
 
+        //we will update the table here. This will display the professor's courses. This has to be called here because calling it earlier would result in professor being "null"
+        JSONWriter.updateTable(professorTableview, professor);
     }
 
-    public void onAddButtonClick(ActionEvent actionEvent){
+    /**
+     * This method is called when the user clicks "add". If there is text in the text field, it will create a new
+     * course of that name. It will then add that course to the professor's list of courses and update the table.
+     */
+    public void onAddButtonClick(){
         if (!txtFieldClass.getText().isEmpty()) {
             Course course = new Course(professor.getName(), txtFieldClass.getText());
             JSONWriter.addCourse(course);

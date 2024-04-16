@@ -1,14 +1,6 @@
 [
   {
-    "courseName": "fawe",
-    "professor": "f"
-  },
-  {
-    "courseName": "fea",
-    "professor": "f"
-  },
-  {
-    "courseName": "fortnite 3",
-    "professor": "f"
+    "courseName": "Intro to Fortnite",
+    "professor": "Professor Goat"
   }
 ]

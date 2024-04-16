@@ -30,6 +30,25 @@ public class Course {
         return this.professor;
     }
 
+    /**
+     * The equals method must be overridden to compare if two courses are the same. This is called in the JSONWriter class.
+     * This prevents the same course from being added a million times.
+     * @param obj <-- the object/course to be compared
+     * @return <-- true if courses are same, false if not
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Course course = (Course) obj;
+        return courseName.equals(course.courseName) && professor.equals(course.professor);
+
+    }
+
 
 
 

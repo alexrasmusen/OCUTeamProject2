@@ -13,7 +13,7 @@
             <TableColumn fx:id="gradeColumn" prefWidth="57.0" text="Grade" />
         </columns>
       </TableView>
-      <Label layoutX="168.0" layoutY="6.0" text="Here are your students in _____" />
+      <Label fx:id="lblWelcomeMessage" layoutX="168.0" layoutY="6.0" text="Here are your students in _____" />
       <HBox layoutX="24.0" layoutY="399.0" prefHeight="27.0" prefWidth="450.0" spacing="30.0">
          <children>
             <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />

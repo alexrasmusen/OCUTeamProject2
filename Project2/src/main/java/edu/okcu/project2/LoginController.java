@@ -3,6 +3,7 @@ package edu.okcu.project2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -65,8 +66,23 @@ public class LoginController {
     }
 
     public void onSecondCancelButtonClick() {
-        Stage stage = (Stage) buttonCancel.getScene().getWindow();
-        stage.close();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("welcome-view.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 400, 400);
+            stage.setScene(scene);
+            Helper.setDarkTheme(scene);
+            stage.show();
+
+            closeCurrentWindow();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void closeCurrentWindow() {
+        Stage currentStage = (Stage) buttonCancel.getScene().getWindow();
+        currentStage.close();
     }
 
     //getters and setters for stuff

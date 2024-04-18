@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.WelcomeController">
    <children>
-      <Label layoutX="22.0" layoutY="31.0" prefHeight="37.0" prefWidth="311.0" text="Welcome! Please choose your appropiate occupation">
+      <Label fx:id="welcomeText" layoutX="22.0" layoutY="31.0" prefHeight="37.0" prefWidth="311.0" text="Welcome! Please choose your appropiate occupation">
          <font>
             <Font size="13.0" />
          </font></Label>

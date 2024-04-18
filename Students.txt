@@ -3,3 +3,4 @@ f5d164a5-db50-4a40-9dae-d3d65176dea6 , 2 , 2 , $2a$10$GisoZ0eYGzO.LPrFkxIPJe6pet
 77d204c4-5f02-4922-8e96-c513f6ca383e , 1 , 1 , $2a$10$P0ESd1AV5.gyc1sd98z65eeRd5n7bK1hjOmEilRnAjZBLIpM.7MzG
 c2614552-071f-4434-b244-fb6f70e74937 , 3 , 3 , $2a$10$xGXBm44rH3iSny5RNnGGbOic9wZtOUQ65Yy9d.qy.Spet5r24H4lW
 1a274178-78cb-455e-a24c-10000d9d66a0 , alex  , alex@gmail.com , $2a$10$mNhOKTOiS4I3RgFNGVJxKOPQT9KIZ8IRIolhaD2kjS58K8EwdSOsO
+48ce3649-c673-48ea-b320-6116f30f1138 , f , f , $2a$10$LRooB94ohf2TpvWiWKS/o.sjhyQ1IngMzvHmOzkhVm7.hvQwmFnZG

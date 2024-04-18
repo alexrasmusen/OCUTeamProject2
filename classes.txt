@@ -1,6 +1,9 @@
 [
   {
     "courseName": "Intro to Fortnite",
-    "professor": "Professor Goat"
+    "professor": "Professor Goat",
+    "students": {
+      "f": "E"
+    }
   }
 ]

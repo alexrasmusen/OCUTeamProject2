@@ -17,10 +17,7 @@ import java.util.HashMap;
 public class WelcomeController {
     @FXML
     private Label welcomeText;
-    @FXML
-    private Button StudentSUButton;
-    @FXML
-    private Button StudentLButton;
+
 
     @FXML
     protected void onStuLoginButtonClick() throws IOException {
@@ -30,6 +27,7 @@ public class WelcomeController {
         Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
+        closeWindow();
     }
     @FXML
     protected void onStuSignUpButtonClick(ActionEvent actionEvent) throws IOException {
@@ -39,6 +37,7 @@ public class WelcomeController {
         Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
+        closeWindow();
     }
     @FXML
     protected void onProfLoginButtonClick(ActionEvent actionEvent)throws IOException{
@@ -48,6 +47,7 @@ public class WelcomeController {
         Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
+        closeWindow();
     }
     @FXML
     protected void onProfSignUpButtonClick()throws IOException{
@@ -57,5 +57,11 @@ public class WelcomeController {
         Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();
+        closeWindow();
+    }
+
+    private void closeWindow() {
+        Stage stage = (Stage) welcomeText.getScene().getWindow();
+        stage.close();
     }
 }

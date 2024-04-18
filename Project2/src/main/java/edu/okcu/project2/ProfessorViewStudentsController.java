@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.HashMap;
+
 public class ProfessorViewStudentsController{
 
     @FXML
@@ -20,7 +22,7 @@ public class ProfessorViewStudentsController{
     @FXML
     TableColumn<Person, String> gradeColumn;
     @FXML
-    Label lblID;
+    Label lblID, lblWelcomeMessage;
     @FXML
     TextField txtName;
     @FXML
@@ -38,6 +40,10 @@ public class ProfessorViewStudentsController{
 
     private Person selectedPerson;
     ObservableList<Person> people;
+
+    Course course;
+    HashMap<String, String> students;
+
 
     public void initialize (){
         btnAdd.setDisable(false);
@@ -73,6 +79,13 @@ public class ProfessorViewStudentsController{
 
 
     public void onAddButtonClick(ActionEvent actionEvent){
+        String studentName = txtName.getText();
+        String grade = txtGrade.getText();
+
+        JSONWriter.updateStudentRecord(tableView, course, studentName, grade);
+
+
+        /*
         var newPerson = new Student();
         newPerson.setID(lblID.getText());
         newPerson.setName(txtName.getText());
@@ -82,6 +95,7 @@ public class ProfessorViewStudentsController{
         } else {
             people.add(newPerson);
         }
+        */
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
@@ -117,4 +131,19 @@ public class ProfessorViewStudentsController{
 
     }
 
+    public void setCourse(Course course){
+        this.course = course;
+        lblWelcomeMessage.setText("Here are the students in " + course.getCourseName());
+    }
+
+    public Course getCourse(){
+        return course;
+    }
+
+    private void getCourseInfo() {
+
+    }
+
+    public void onSignOutButtonClick(ActionEvent actionEvent) {
+    }
 }

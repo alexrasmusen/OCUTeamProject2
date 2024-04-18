@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.ProfessorTableController">
    <children>
-      <Label layoutX="199.0" layoutY="14.0" text="Welcome Professor" />
+      <Label fx:id="lblWelcomeMessage" layoutX="199.0" layoutY="14.0" text="Welcome Professor" />
       <TableView fx:id="professorTableview" layoutX="10.0" layoutY="63.0" prefHeight="219.0" prefWidth="483.0">
         <columns>
            <TableColumn fx:id="classColumn" prefWidth="408.0" text="Classes" />
@@ -27,7 +27,7 @@
       <HBox layoutX="120.0" layoutY="381.0" prefHeight="31.0" prefWidth="281.0" spacing="30.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
-            <Button mnemonicParsing="false" text="Update" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update" />
             <Button mnemonicParsing="false" text="Delete" />
             <Button mnemonicParsing="false" text="Clear" />
          </children>

@@ -1,10 +1,7 @@
 package edu.okcu.project2;
 
 import com.google.gson.*;
-import com.fasterxml.jackson.core.*;
-import com.fasterxml.jackson.core.util.*;
 
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import javafx.scene.control.TableView;
@@ -43,7 +40,7 @@ public class JSONWriter {
     }
 
 
-    public static void updateTable(TableView tableView, Professor professor) {
+    public static void updateTableForProfessors(TableView tableView, Professor professor) {
         List<Course> courses = readCourses();
         //clear the table
         tableView.getItems().clear();
@@ -57,6 +54,20 @@ public class JSONWriter {
             }
         }
 
+    }
+
+    public static void updateTableForStudents(TableView tableView, Student student) {
+        List<Course> courses = readCourses();
+        //clear the table
+        tableView.getItems().clear();
+
+        //loop through students to list
+        for (Course course : courses) {
+            //if the student is in the course, add it to the table
+            if (course.students.containsKey(student.getName())) {
+                tableView.getItems().add(course);
+            }
+        }
     }
 
     /**
@@ -74,5 +85,20 @@ public class JSONWriter {
         }
     }
 
-
+    //TODO: This will currently add a student and their grade. We need to update the table now
+    public static void updateStudentRecord(TableView tableView, Course course, String name, String grade) {
+        List<Course> courses = readCourses();
+        for (Course c : courses) {
+            if (c.equals(course)) {
+                c.updateStudent(name, grade);
+            }
+        }
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (FileWriter writer = new FileWriter(FILE)) {
+            gson.toJson(courses, writer);
+        }
+     catch (IOException e) {
+        e.printStackTrace();
+    }
+    }
 }

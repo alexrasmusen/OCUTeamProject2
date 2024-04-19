@@ -44,6 +44,7 @@ public class ProfessorTableController {
     public void setProfessor(Professor professor) {
         this.professor = professor;
         lblWelcomeMessage.setText("Welcome, " + professor.getName());
+        JSONWriter.readCourses();
         //we will update the table here. This will display the professor's courses. This has to be called here because calling it earlier would result in professor being "null"
         JSONWriter.updateTableForProfessors(professorTableview, professor);
     }

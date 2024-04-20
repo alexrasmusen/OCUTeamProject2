@@ -41,6 +41,11 @@ public class ProfessorTableController {
         classColumn.setCellValueFactory(new PropertyValueFactory<Course, String>("courseName"));
 
     }
+
+    /**
+     * Method to set the professor. This is called from the welcome view controller. It will set the professor and update the table.
+     * @param professor
+     */
     public void setProfessor(Professor professor) {
         this.professor = professor;
         lblWelcomeMessage.setText("Welcome, " + professor.getName());

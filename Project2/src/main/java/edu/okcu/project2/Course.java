@@ -19,6 +19,10 @@ public class Course {
         students.put(student, grade);
     }
 
+    public void removeStudent(String student) {
+        students.remove(student);
+    }
+
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }

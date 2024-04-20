@@ -10,3 +10,6 @@ c2614552-071f-4434-b244-fb6f70e74937 , 3 , 3 , $2a$10$xGXBm44rH3iSny5RNnGGbOic9w
 712553df-dffe-4303-8171-7b2e8f8a7dea , 1 , 1 , $2a$10$Z894jkjAp/.crVyMsjji7.1fAQzyu5rvijIc0E1BNwDqwE.GBAQUW
 dc02e787-5f08-48f9-9b4c-88acf7632302 , y , y , $2a$10$Vi/tJeqrg6jL9BiI5kQnTugvLTMG4PkUZrv2/CMhV7diLAcz19YfK
 c433fb60-84e4-42d1-816a-a4f58e9abab7 , shinji@gmail.com , shinji , $2a$10$UTDk92VPhKfJh76FbVosjuPawhhsQIZlPzGys/4zz1qxmu/KU5yD6
+50c1f63d-e9da-412d-b963-f992a744bfdd , q , q , $2a$10$B8ax9hKNTX1IUxJMOe5oyuvQpgoUb1h.EqGaXAVmQcyDjMDcpN5W6
+8559c2a3-a7d0-4e04-ac01-da7ccc687f97 , w , w , $2a$10$oj.Wv21GfCznLFBVAdacwOzZwdrPvaFXiEJ9ojBkB8il/AeZTZFpW
+dee1bf5b-2668-422f-9115-3289400e2ce0 , e , e , $2a$10$hZjpGCmy0rR/oZwZ4WSSwevaloPeR7m4cPliIGpheEAF5VeejhmS.

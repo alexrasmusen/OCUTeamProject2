@@ -4,7 +4,8 @@
     "professor": "Professor Goat",
     "students": {
       "shinji": "B-",
-      "y": "A-"
+      "3": "A+++",
+      "GsF": "G"
     }
   }
 ]

@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class ProfessorViewStudentsController{
 
@@ -53,6 +54,28 @@ public class ProfessorViewStudentsController{
         nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("email"));
         gradeColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("grade"));
+
+
+        //add a listener to the table view
+        tableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                //convert selection to student
+                Student selectedStudent = (Student) newSelection;
+
+                //set the text fields to the selected student
+                txtName.setText(selectedStudent.getName());
+                txtEmail.setText(selectedStudent.getEmail());
+                txtGrade.setText(selectedStudent.getGrade());
+                lblID.setText(String.valueOf(selectedStudent.getID()));
+                //enable update if a student is selected
+                btnUpdate.setDisable(false);
+                btnDelete.setDisable(false);
+            } else {
+                //if no student is selected, disable update button
+                btnUpdate.setDisable(true);
+                btnDelete.setDisable(true);
+            }
+        });
 
         /*
         tableView.setItems(people);
@@ -101,7 +124,7 @@ public class ProfessorViewStudentsController{
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
         for (var record : people) {
-            if (record.getID() == selectedPerson.getID()) {
+            if (Objects.equals(record.getID(), selectedPerson.getID())) {
                 record.setID(lblID.getText());
                 record.setName(txtName.getText());
                 record.setEmail(txtEmail.getText());
@@ -110,15 +133,27 @@ public class ProfessorViewStudentsController{
         tableView.refresh();
     }
 
-    public void onDeleteButtonClick(ActionEvent actionEvent){
+    /**
+     * Here's the method for removing a student. It gets the student's name from the text field,
+     * then removes it from the JSON file as well as the table.
+     */
+    public void onDeleteButtonClick(){
+        String studentName = txtName.getText();
+        JSONWriter.removeStudent(course, studentName);
+        //this was just supposed to be an initial method, but I realized it would still work here to refresh the table
+        JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
+        tableView.refresh();
+
+        /*
         if(selectedPerson != null){
             people.remove(selectedPerson);
         } else {
             lblError.setText("Please select a student");
         }
+         */
     }
 
-    public void onClearButtonClick(ActionEvent actionEvent){
+    public void onClearButtonClick(){
         txtName.setText("");
         txtEmail.setText("");
         txtGrade.setText("");
@@ -135,6 +170,7 @@ public class ProfessorViewStudentsController{
     public void setCourse(Course course){
         this.course = course;
         lblWelcomeMessage.setText("Here are the students in " + course.getCourseName());
+        //call the initial table refresh
         JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
     }
 

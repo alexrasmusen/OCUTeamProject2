@@ -15,3 +15,4 @@ c433fb60-84e4-42d1-816a-a4f58e9abab7 , shinji@gmail.com , shinji , $2a$10$UTDk92
 dee1bf5b-2668-422f-9115-3289400e2ce0 , e , e , $2a$10$hZjpGCmy0rR/oZwZ4WSSwevaloPeR7m4cPliIGpheEAF5VeejhmS.
 de912703-50d8-4692-aa6d-624d8aacb1fb , email , name , $2a$10$JLto8p90dXTtpgInno17CO.iuAsdqBcWbEJLuhPmVZWMTcZpxyTKu
 2171a1f1-6c3d-4b3b-9847-a6fabbf128df , goat , email1@email.com , $2a$10$afzqb3EhLJ3Rwv3Z4w0bcueTyCQKjrgppweaQMCetEvOyDcd9gZ32
+8a44f54f-65c3-471b-87c5-8e788e29968f , 1 , 1 , $2a$10$m4YjsBvFnWmhJiEohgo9teXnMRw75uUi7v1fytsBtn0XzunZvAZmu

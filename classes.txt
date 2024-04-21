@@ -15,5 +15,20 @@
       "fortnite": "T",
       "name1": "P"
     }
+  },
+  {
+    "courseName": "Intro to dance",
+    "professor": "1",
+    "students": {}
+  },
+  {
+    "courseName": "dance",
+    "professor": "1",
+    "students": {}
+  },
+  {
+    "courseName": "math",
+    "professor": "1",
+    "students": {}
   }
 ]

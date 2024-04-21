@@ -38,7 +38,7 @@ public class StudentLoginController extends LoginController {
                 stage.show();
 
                 //close the login window
-                super.onSecondCancelButtonClick();
+                super.closeCurrentWindow();
             }
 
 

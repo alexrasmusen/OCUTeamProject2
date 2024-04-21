@@ -1,7 +1,4 @@
 4671c396-df3c-4242-a30e-7e2460c80b56 , Professor Goat , f , $2a$10$1a2tuYM1R.DvRNIoGaUgAeg9OQk/.Oz/QqGeP.h6pi850boTLKgJu
 f41a74ab-0ee0-4f7d-b490-3647476def7d , waefjijwofa , jafewiofja , $2a$10$UbllOPJi33tY/cZKzcj1.ua6eqzoiSx0GN8vjUgAZq3zuK8oVEXma
 7f6e97be-79d4-4a8b-9333-bacb8160179b , fawe , awfe , $2a$10$J0nxLkjFpF0VqPfJMLjV/uJX7/niSvDAlEQnMaca2dO/SfcKTFxVC
-33f47b80-0d8a-49ba-aa87-6ab56a2b8965 , alex , alex@gmail , $2a$10$QuvtmZRNpuPOO5yLLcH9XuHhK2tlpckPPRUpYLSKhJSLgZKdZWuXm
-38bc9665-9f39-40c7-b8f0-1cc8c741aa6f , 1 , 1 , $2a$10$Msmpt5L5tsPMMX/ff6lEm.XtgaeD1b2RvW9.5LviG5KV0paYx7CXu
-fa79c6fd-8fa3-4135-9a9f-67ce9bb7dd8d , 1 , 1 , $2a$10$utRzCp9vurrls7ZOmOoJdu/2tQ537BMbVpqZ47j.5c5eqOFngFc4e
-1f8a095e-fb65-48d0-8038-f28b88c7080a , 1 , 2 , $2a$10$.PecIIJI2As09zpsbhQ/BejDcZjEV4pYszLA4p0L.DseIhkOLmjAe
+1e084351-c5a8-4b6a-bd20-c410bfcccf25 , q , w , $2a$10$G7Md7hYtiE6s4yxikW39BeGdR4fx6n//XlpP9IKqT1CE1HWW5.65S

@@ -3,21 +3,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.StudentTableController">
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.StudentTableController">
    <children>
-      <Label layoutX="224.0" layoutY="24.0" text="Welcome!" />
+      <Label layoutX="201.0" layoutY="25.0" text="Welcome Student " />
       <Label layoutX="163.0" layoutY="48.0" text="Below are your registered classes" />
-      <TableView layoutX="48.0" layoutY="81.0" prefHeight="222.0" prefWidth="405.0">
+      <TableView fx:id="studentTableView" layoutX="48.0" layoutY="81.0" prefHeight="200.0" prefWidth="405.0">
         <columns>
-          <TableColumn prefWidth="404.0" text="Classes" />
+          <TableColumn fx:id="columnClasses" prefWidth="404.0" text="Classes" />
         </columns>
       </TableView>
-      <HBox layoutX="125.0" layoutY="344.0" prefHeight="28.0" prefWidth="249.0" spacing="50.0">
+      <HBox layoutX="127.0" layoutY="336.0" prefHeight="28.0" prefWidth="247.0" spacing="50.0">
          <children>
             <Button mnemonicParsing="false" text="Add" />
             <Button mnemonicParsing="false" text="Update" />
             <Button mnemonicParsing="false" text="Delete" />
          </children>
       </HBox>
+      <ComboBox fx:id="comboCourses" layoutX="174.0" layoutY="294.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

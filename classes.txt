@@ -3,17 +3,23 @@
     "courseName": "Real Class",
     "professor": "Professor Goat",
     "students": {
-      "shinji": "B-",
-      "q": "B-",
+      "realstudent": "Y",
       "hank": "T",
-      "w": "F+",
       "Hunk": "T",
+      "Junk": "T",
+      "goat": "T",
+      "shinji": "B-",
+      "q": "t",
+      "w": "t",
+      "name": "f",
       "GsF": "G",
       "hankhill@g.com": "T",
-      "Junk": "T",
-      "goat": "L",
+      "name2": "R",
       "fortnite": "T",
-      "name1": "P"
+      "name1": "P",
+      "email": "t",
+      "alex@gmail.com": "Y",
+      "goat@gmail.com": "r"
     }
   },
   {

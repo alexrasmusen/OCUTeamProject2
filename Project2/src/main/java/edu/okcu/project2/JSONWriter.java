@@ -4,6 +4,7 @@ import com.google.gson.*;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 
 import java.io.*;
@@ -73,7 +74,6 @@ public class JSONWriter {
      */
     public static void updateTableForStudents(TableView tableView, Student student, Course selectedCourse) {
         try {
-
             //loop through students to list
             for (Course course : courses) {
                 //if the student is in the course, add it to the table
@@ -87,9 +87,7 @@ public class JSONWriter {
     }
 
     /**
-     * This is a method to read in the existing courses from the file.
-     *
-     * @return <-- returns a list of courses. if no courses are present, returns a new list.
+     * This is a method to read in the existing courses from the file "classes.txt"
      */
     public static void readCourses() {
         try {
@@ -159,11 +157,11 @@ public class JSONWriter {
             while ((row = reader.readLine()) != null) {
                 var items = row.split(" , ");
                 var IDFromFile = items[0];
-                var nameFromFile = items[2];
-                var emailFromFile = items[1];
+                var nameFromFile = items[1];
+                var emailFromFile = items[2];
 
                 //check if the student name is correct
-                if (nameFromFile.equals(studentName)) {
+                if (nameFromFile.equalsIgnoreCase(studentName)) {
                     Student student = new Student(IDFromFile, nameFromFile, emailFromFile, grade);
                     updateTableForStudents(tableView, student, course);
                 }
@@ -257,6 +255,12 @@ public class JSONWriter {
             initialTableRefreshForProfessorStudentView(course, tableView);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void getCoursesOffered(ComboBox comboBox) {
+        for (Course course : courses) {
+            comboBox.getItems().add(course);
         }
     }
 

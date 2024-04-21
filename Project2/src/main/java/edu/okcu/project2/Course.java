@@ -58,6 +58,11 @@ public class Course {
 
     }
 
+    @Override
+    public String toString() {
+        return this.courseName;
+    }
+
 
 
 

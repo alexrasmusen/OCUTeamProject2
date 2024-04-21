@@ -107,7 +107,7 @@ public class ProfessorViewStudentsController{
     public void onAddButtonClick(ActionEvent actionEvent){
         String studentName = txtName.getText();
         String grade = txtGrade.getText();
-        JSONWriter.updateStudentAndGrade(tableView, course, studentName, grade);
+        JSONWriter.updateStudentAndGrade(tableView, course, studentName.toLowerCase(), grade);
         tableView.refresh();
 
 

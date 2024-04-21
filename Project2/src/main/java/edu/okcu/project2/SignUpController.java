@@ -2,6 +2,9 @@ package edu.okcu.project2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -42,9 +45,12 @@ public class SignUpController {
 
         try (FileWriter fw = new FileWriter(file, true)) {
             fw.write(uniqueID + " , " + SignUpName + " , " + SignUpEmail + " , " + hashedPassword + "\n");
+
+            //todo: this currently just closes the window and reopens previous. it needs to give some message like
+            // "you have successfully signed up" and then close the window
+            onCancelButtonClick();
         } catch (IOException e) {
-            e.printStackTrace(); // Print the stack trace for debugging
-            // Handle the IOException appropriately, e.g., show an error message to the user
+            e.printStackTrace();
         }
 
 
@@ -52,9 +58,20 @@ public class SignUpController {
         stage.close();
         }
     //This method closes the application if the cancel button is clicked
-    public void onCancelButtonClick(ActionEvent actionEvent) {
-        Stage stage = (Stage) buttonCancel.getScene().getWindow();
-        stage.close();
+    public void onCancelButtonClick() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("welcome-view.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 400, 400);
+            stage.setScene(scene);
+            Helper.setDarkTheme(scene);
+            stage.show();
+
+            Stage currentStage = (Stage) buttonCancel.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setFile(String file) {

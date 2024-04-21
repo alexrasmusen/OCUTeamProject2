@@ -1,6 +1,11 @@
 [
   {
-    "courseName": "Intro to Fortnite",
-    "professor": "Professor Goat"
+    "courseName": "Real Class",
+    "professor": "Professor Goat",
+    "students": {
+      "shinji": "B-",
+      "3": "A+++",
+      "GsF": "G"
+    }
   }
 ]

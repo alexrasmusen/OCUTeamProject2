@@ -37,7 +37,7 @@ public class ProfessorLoginController extends LoginController {
                 stage.show();
 
                 //close login window
-                super.onSecondCancelButtonClick();
+                super.closeCurrentWindow();
             }
         } catch (Exception e) {
             e.printStackTrace();

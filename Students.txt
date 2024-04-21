@@ -3,3 +3,13 @@ f5d164a5-db50-4a40-9dae-d3d65176dea6 , 2 , 2 , $2a$10$GisoZ0eYGzO.LPrFkxIPJe6pet
 77d204c4-5f02-4922-8e96-c513f6ca383e , 1 , 1 , $2a$10$P0ESd1AV5.gyc1sd98z65eeRd5n7bK1hjOmEilRnAjZBLIpM.7MzG
 c2614552-071f-4434-b244-fb6f70e74937 , 3 , 3 , $2a$10$xGXBm44rH3iSny5RNnGGbOic9wZtOUQ65Yy9d.qy.Spet5r24H4lW
 1a274178-78cb-455e-a24c-10000d9d66a0 , alex  , alex@gmail.com , $2a$10$mNhOKTOiS4I3RgFNGVJxKOPQT9KIZ8IRIolhaD2kjS58K8EwdSOsO
+48ce3649-c673-48ea-b320-6116f30f1138 , f , f , $2a$10$LRooB94ohf2TpvWiWKS/o.sjhyQ1IngMzvHmOzkhVm7.hvQwmFnZG
+302ea0f3-4f7c-4885-860a-10d0e72362c0 , bobby@gmail.com , bobby , $2a$10$wd/3STNosCY.YOwVJGNZCuadnZFcunYkwRq49qzq.9af7S/d3RZxq
+296e7a27-6e78-4d87-a0d1-1dd71553e470 , hankhill@gmail.com , hank , $2a$10$7g1N76HHcjBELPKOJ9ZJ..hXmp1kL8JLq50bpNPxsXPZdrvK3IdbS
+02dcb288-5386-482a-92b0-55054cfa7d19 , g@gmail.g , goat , $2a$10$299UobyYsw5Y8R8zaU3Hn.8vmUJ4buPGvfGu12hsfTqEX081ag3Yy
+712553df-dffe-4303-8171-7b2e8f8a7dea , 1 , 1 , $2a$10$Z894jkjAp/.crVyMsjji7.1fAQzyu5rvijIc0E1BNwDqwE.GBAQUW
+dc02e787-5f08-48f9-9b4c-88acf7632302 , y , y , $2a$10$Vi/tJeqrg6jL9BiI5kQnTugvLTMG4PkUZrv2/CMhV7diLAcz19YfK
+c433fb60-84e4-42d1-816a-a4f58e9abab7 , shinji@gmail.com , shinji , $2a$10$UTDk92VPhKfJh76FbVosjuPawhhsQIZlPzGys/4zz1qxmu/KU5yD6
+50c1f63d-e9da-412d-b963-f992a744bfdd , q , q , $2a$10$B8ax9hKNTX1IUxJMOe5oyuvQpgoUb1h.EqGaXAVmQcyDjMDcpN5W6
+8559c2a3-a7d0-4e04-ac01-da7ccc687f97 , w , w , $2a$10$oj.Wv21GfCznLFBVAdacwOzZwdrPvaFXiEJ9ojBkB8il/AeZTZFpW
+dee1bf5b-2668-422f-9115-3289400e2ce0 , e , e , $2a$10$hZjpGCmy0rR/oZwZ4WSSwevaloPeR7m4cPliIGpheEAF5VeejhmS.

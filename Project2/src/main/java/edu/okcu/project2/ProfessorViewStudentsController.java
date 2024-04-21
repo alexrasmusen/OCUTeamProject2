@@ -1,26 +1,28 @@
 package edu.okcu.project2;
 
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.HashMap;
+import java.util.Objects;
+
 public class ProfessorViewStudentsController{
 
     @FXML
-    TableView<Person> tableView;
+    TableView<Person> tableView = new TableView<>();
     @FXML
-    TableColumn<Person, Integer> IDColumn;
+    TableColumn<Student, Integer> IDColumn;
     @FXML
-    TableColumn<Person, String> nameColumn;
+    TableColumn<Student, String> nameColumn;
     @FXML
-    TableColumn<Person, String> emailColumn;
+    TableColumn<Student, String> emailColumn;
     @FXML
-    TableColumn<Person, String> gradeColumn;
+    TableColumn<Student, String> gradeColumn;
     @FXML
-    Label lblID;
+    Label lblID, lblWelcomeMessage;
     @FXML
     TextField txtName;
     @FXML
@@ -39,17 +41,43 @@ public class ProfessorViewStudentsController{
     private Person selectedPerson;
     ObservableList<Person> people;
 
+    Course course;
+    HashMap<String, String> students;
+
+
     public void initialize (){
         btnAdd.setDisable(false);
         btnUpdate.setDisable(true);
         btnDelete.setDisable(true);
 
-        IDColumn.setCellValueFactory(new PropertyValueFactory<Person, Integer>("ID"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("name"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("email"));
-        gradeColumn.setCellValueFactory(new PropertyValueFactory<Person, String>("grade"));
+        IDColumn.setCellValueFactory(new PropertyValueFactory<Student, Integer>("ID"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("email"));
+        gradeColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("grade"));
 
 
+        //add a listener to the table view
+        tableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                //convert selection to student
+                Student selectedStudent = (Student) newSelection;
+
+                //set the text fields to the selected student
+                txtName.setText(selectedStudent.getName());
+                txtEmail.setText(selectedStudent.getEmail());
+                txtGrade.setText(selectedStudent.getGrade());
+                lblID.setText(String.valueOf(selectedStudent.getID()));
+                //enable update if a student is selected
+                btnUpdate.setDisable(false);
+                btnDelete.setDisable(false);
+            } else {
+                //if no student is selected, disable update button
+                btnUpdate.setDisable(true);
+                btnDelete.setDisable(true);
+            }
+        });
+
+        /*
         tableView.setItems(people);
 
         TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
@@ -69,10 +97,19 @@ public class ProfessorViewStudentsController{
                 txtName.setText(selectedPerson.getName());
             }
         });
+
+         */
     }
 
 
     public void onAddButtonClick(ActionEvent actionEvent){
+        String studentName = txtName.getText();
+        String grade = txtGrade.getText();
+        JSONWriter.updateStudentRecord(tableView, course, studentName, grade);
+        tableView.refresh();
+
+
+        /*
         var newPerson = new Student();
         newPerson.setID(lblID.getText());
         newPerson.setName(txtName.getText());
@@ -82,11 +119,12 @@ public class ProfessorViewStudentsController{
         } else {
             people.add(newPerson);
         }
+        */
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
         for (var record : people) {
-            if (record.getID() == selectedPerson.getID()) {
+            if (Objects.equals(record.getID(), selectedPerson.getID())) {
                 record.setID(lblID.getText());
                 record.setName(txtName.getText());
                 record.setEmail(txtEmail.getText());
@@ -95,15 +133,27 @@ public class ProfessorViewStudentsController{
         tableView.refresh();
     }
 
-    public void onDeleteButtonClick(ActionEvent actionEvent){
+    /**
+     * Here's the method for removing a student. It gets the student's name from the text field,
+     * then removes it from the JSON file as well as the table.
+     */
+    public void onDeleteButtonClick(){
+        String studentName = txtName.getText();
+        JSONWriter.removeStudent(course, studentName);
+        //this was just supposed to be an initial method, but I realized it would still work here to refresh the table
+        JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
+        tableView.refresh();
+
+        /*
         if(selectedPerson != null){
             people.remove(selectedPerson);
         } else {
             lblError.setText("Please select a student");
         }
+         */
     }
 
-    public void onClearButtonClick(ActionEvent actionEvent){
+    public void onClearButtonClick(){
         txtName.setText("");
         txtEmail.setText("");
         txtGrade.setText("");
@@ -117,4 +167,21 @@ public class ProfessorViewStudentsController{
 
     }
 
+    public void setCourse(Course course){
+        this.course = course;
+        lblWelcomeMessage.setText("Here are the students in " + course.getCourseName());
+        //call the initial table refresh
+        JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
+    }
+
+    public Course getCourse(){
+        return course;
+    }
+
+    private void getCourseInfo() {
+
+    }
+
+    public void onSignOutButtonClick(ActionEvent actionEvent) {
+    }
 }

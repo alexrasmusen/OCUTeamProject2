@@ -7,11 +7,20 @@ public class Course {
     //for some reason, these have to be public or GSON struggles with writing them
     public String courseName;
     public String professor;
+    public HashMap<String, String> students = new HashMap<>();
 
 
     public Course(String professor, String courseName) {
         setProfessor(professor);
         setCourseName(courseName);
+    }
+
+    public void updateStudent(String student, String grade) {
+        students.put(student, grade);
+    }
+
+    public void removeStudent(String student) {
+        students.remove(student);
     }
 
     public void setCourseName(String courseName) {

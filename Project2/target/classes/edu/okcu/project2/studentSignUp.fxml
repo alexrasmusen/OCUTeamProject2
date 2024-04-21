@@ -1,27 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.StudentSignUpController">
    <children>
-      <VBox alignment="CENTER" layoutY="18.0" prefHeight="331.0" prefWidth="300.0" spacing="9.0">
+      <ImageView fitHeight="407.0" fitWidth="150.0" layoutX="273.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uiDesign.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="5.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="269.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="7.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="269.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="398.0" layoutX="261.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="16.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="392.0" layoutX="3.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="16.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="4.0" layoutY="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="269.0" />
+      <VBox alignment="CENTER" layoutX="15.0" layoutY="89.0" prefHeight="295.0" prefWidth="252.0" spacing="9.0">
          <children>
-            <Label fx:id="lblSignUp" prefHeight="58.0" prefWidth="300.0" text="     Student Sign Up">
+            <Label fx:id="lblName" prefHeight="17.0" prefWidth="149.0" text="Name">
                <font>
-                  <Font size="30.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblName" prefHeight="17.0" prefWidth="149.0" text="Name" />
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
             <TextField fx:id="txtfieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
-            <Label fx:id="lblEmail" prefHeight="17.0" prefWidth="150.0" text="Email" />
+            <Label fx:id="lblEmail" prefHeight="17.0" prefWidth="150.0" text="Email">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
             <TextField fx:id="txtfieldName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
-            <Label fx:id="lblPassword" prefHeight="17.0" prefWidth="150.0" text="Password" />
-            <PasswordField fx:id="txtfieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
+            <Label fx:id="lblPassword" prefHeight="17.0" prefWidth="150.0" text="Password">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
+            <PasswordField fx:id="txtfieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></PasswordField>
             <Button fx:id="buttonSignUp" mnemonicParsing="false" onAction="#onSignUpClick" text="Sign Up" />
             <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
          </children>
       </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="398.0" layoutX="265.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="16.0" />
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="63.0" prefWidth="252.0">
+         <children>
+            <Label fx:id="lblSignUp" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="252.0" text="Student Sign Up" textAlignment="CENTER">
+                <font>
+                  <Font name="Bodoni MT" size="30.0" />
+               </font>
+            </Label>
+         </children></VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="10.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="269.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="392.0" layoutX="-2.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="16.0" />
    </children>
 </AnchorPane>

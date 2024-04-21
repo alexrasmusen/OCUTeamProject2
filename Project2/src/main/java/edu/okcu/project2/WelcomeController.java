@@ -26,7 +26,7 @@ public class WelcomeController {
     protected void onStuLoginButtonClick() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("studentLogin.fxml"));
         Stage stage = new Stage();
-        Scene scene = new Scene(root, 350, 300);
+        Scene scene = new Scene(root, 400, 400);
         Helper.setDarkTheme(scene);
         stage.setScene(scene);
         stage.show();

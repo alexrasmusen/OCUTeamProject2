@@ -1,27 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.ProfessorSignUpController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.ProfessorSignUpController">
     <children>
-        <Label fx:id="lblName" layoutX="73.0" layoutY="122.0" text="Name" />
-        <TextField fx:id="txtfieldName" layoutX="72.0" layoutY="139.0" />
-        <Label fx:id="lblEmail" layoutX="73.0" layoutY="164.0" text="Email" />
-        <TextField fx:id="txtfieldEmail" layoutX="73.0" layoutY="181.0" />
-        <Label fx:id="lblPassword" layoutX="73.0" layoutY="206.0" text="Password" />
-        <Button fx:id="buttonSignUp" layoutX="118.0" layoutY="277.0" mnemonicParsing="false" onAction="#onSignUpClick" text="Sign Up" />
-        <Button fx:id="buttonCancel" layoutX="121.0" layoutY="312.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
-        <VBox alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="103.0" prefWidth="280.0">
+      <VBox alignment="CENTER" fillWidth="false" layoutX="22.0" layoutY="92.0" prefHeight="289.0" prefWidth="246.0" spacing="10.0">
+         <children>
+              <Label fx:id="lblName" prefHeight="17.0" prefWidth="162.0" text="Name" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
+              <TextField fx:id="txtfieldName" prefHeight="25.0" prefWidth="161.0" />
+              <Label fx:id="lblEmail" prefHeight="17.0" prefWidth="159.0" text="Email">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
+              <TextField fx:id="txtfieldEmail" prefHeight="25.0" prefWidth="159.0" scaleShape="false" />
+              <Label fx:id="lblPassword" prefHeight="17.0" prefWidth="158.0" text="Password">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font></Label>
+              <PasswordField fx:id="txtfieldPassword" prefHeight="25.0" prefWidth="161.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></PasswordField>
+              <Button fx:id="buttonSignUp" mnemonicParsing="false" onAction="#onSignUpClick" text="Sign Up" />
+              <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+         </children>
+      </VBox>
+        <VBox alignment="CENTER" layoutX="22.0" layoutY="6.0" prefHeight="86.0" prefWidth="246.0">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" text="Professor Sign Up">
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="256.0" text="Professor Sign Up">
                     <font>
-                        <Font size="30.0" />
+                        <Font name="Bodoni MT" size="30.0" />
                     </font>
                 </Label>
             </children>
         </VBox>
-        <PasswordField fx:id="txtfieldPassword" layoutX="74.0" layoutY="223.0" />
+      <ImageView fitHeight="420.0" fitWidth="186.0" layoutX="270.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uiDesign.png" />
+         </image></ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="1.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="1.0" layoutY="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="397.0" layoutX="5.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="397.0" layoutX="268.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="12.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="416.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="-1.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="421.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="397.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="397.0" layoutX="272.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="6.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="280.0" />
     </children>
 </AnchorPane>

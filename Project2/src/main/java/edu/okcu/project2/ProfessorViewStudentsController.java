@@ -7,7 +7,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public class ProfessorViewStudentsController{
 
@@ -70,12 +69,15 @@ public class ProfessorViewStudentsController{
                 //enable update if a student is selected
                 btnUpdate.setDisable(false);
                 btnDelete.setDisable(false);
+                btnAdd.setDisable(true);
             } else {
                 //if no student is selected, disable update button
                 btnUpdate.setDisable(true);
                 btnDelete.setDisable(true);
+                btnAdd.setDisable(false);
             }
         });
+
 
         /*
         tableView.setItems(people);
@@ -105,7 +107,7 @@ public class ProfessorViewStudentsController{
     public void onAddButtonClick(ActionEvent actionEvent){
         String studentName = txtName.getText();
         String grade = txtGrade.getText();
-        JSONWriter.updateStudentRecord(tableView, course, studentName, grade);
+        JSONWriter.updateStudentAndGrade(tableView, course, studentName, grade);
         tableView.refresh();
 
 
@@ -123,6 +125,7 @@ public class ProfessorViewStudentsController{
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
+        /*
         for (var record : people) {
             if (Objects.equals(record.getID(), selectedPerson.getID())) {
                 record.setID(lblID.getText());
@@ -130,6 +133,10 @@ public class ProfessorViewStudentsController{
                 record.setEmail(txtEmail.getText());
             }
         }
+
+         */
+        Student student = new Student(lblID.getText(), txtName.getText(), txtEmail.getText(), txtGrade.getText());
+        JSONWriter.updateStudentInfo(course, tableView, student);
         tableView.refresh();
     }
 
@@ -154,9 +161,15 @@ public class ProfessorViewStudentsController{
     }
 
     public void onClearButtonClick(){
+        //clear all the text
         txtName.setText("");
         txtEmail.setText("");
         txtGrade.setText("");
+        lblID.setText("");
+        //disable some buttons
+        btnAdd.setDisable(false);
+        btnUpdate.setDisable(true);
+        btnDelete.setDisable(true);
     }
 
     public void onReturnButtonClick(ActionEvent actionEvent){

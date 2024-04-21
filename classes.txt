@@ -4,8 +4,16 @@
     "professor": "Professor Goat",
     "students": {
       "shinji": "B-",
-      "3": "A+++",
-      "GsF": "G"
+      "q": "B-",
+      "hank": "T",
+      "w": "F+",
+      "Hunk": "T",
+      "GsF": "G",
+      "hankhill@g.com": "T",
+      "Junk": "T",
+      "goat": "L",
+      "fortnite": "T",
+      "name1": "P"
     }
   }
 ]

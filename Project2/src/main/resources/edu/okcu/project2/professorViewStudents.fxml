@@ -19,7 +19,7 @@
             <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
             <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update" />
             <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
-            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#onClearButtonClick" text="Deselect" />
             <Button mnemonicParsing="false" onAction="#onReturnButtonClick" text="Return" />
             <Button mnemonicParsing="false" onAction="#onSignOutButtonClick" text="Signout" />
          </children>

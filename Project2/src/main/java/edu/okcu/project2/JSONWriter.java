@@ -5,7 +5,6 @@ import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import javafx.scene.control.TableView;
-import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -113,7 +112,7 @@ public class JSONWriter {
      * @param name      <-- the student's name
      * @param grade     <-- the student's grade
      */
-    public static void updateStudentRecord(TableView tableView, Course course, String name, String grade) {
+    public static void updateStudentAndGrade(TableView tableView, Course course, String name, String grade) {
 
         for (Course c : courses) {
             if (c.equals(course)) {
@@ -191,8 +190,8 @@ public class JSONWriter {
             while ((row = reader.readLine()) != null) {
                 var items = row.split(" , ");
                 var IDFromFile = items[0];
-                var nameFromFile = items[2];
-                var emailFromFile = items[1];
+                var nameFromFile = items[1];
+                var emailFromFile = items[2];
 
 
                 //check if the student name is correct
@@ -226,6 +225,38 @@ public class JSONWriter {
                     getStudentInfo(student, tableView, grade, course);
                 }
             }
+        }
+    }
+
+    public static void updateStudentInfo(Course course, TableView tableView, Student student) {
+        File file = new File("Students.txt");
+        StringBuilder currentInfo = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            //read in all the current records
+            String row;
+            while ((row = reader.readLine()) != null) {
+                var items = row.split(" , ");
+                var IDFromFile = items[0];
+                var hashedPassword = items[3];
+                //check if the student name is correct
+                if (IDFromFile.equals(student.getID())) {
+                    currentInfo.append(student.ID).append(" , ").append(student.getName()).append(" , ").append(student.getEmail()).append(" , ").append(hashedPassword).append("\n");
+                } else {
+                    //if it's not the correct student, just append the row
+                    currentInfo.append(row).append("\n");
+                }
+            }
+            try (FileWriter writer = new FileWriter(file)) {
+                writer.write(currentInfo.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            updateStudentAndGrade(tableView, course, student.getName(), student.getGrade());
+            // add updated student to table view
+            tableView.getItems().add(student);
+            initialTableRefreshForProfessorStudentView(course, tableView);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

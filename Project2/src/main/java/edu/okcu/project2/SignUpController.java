@@ -46,8 +46,6 @@ public class SignUpController {
         try (FileWriter fw = new FileWriter(file, true)) {
             fw.write(uniqueID + " , " + SignUpName + " , " + SignUpEmail + " , " + hashedPassword + "\n");
 
-            //todo: this currently just closes the window and reopens previous. it needs to give some message like
-            // "you have successfully signed up" and then close the window
             onCancelButtonClick();
         } catch (IOException e) {
             e.printStackTrace();

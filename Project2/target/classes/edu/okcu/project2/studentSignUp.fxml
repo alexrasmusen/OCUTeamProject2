@@ -25,12 +25,12 @@
                <font>
                   <Font name="Bodoni MT" size="16.0" />
                </font></Label>
-            <TextField fx:id="txtfieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
+            <TextField fx:id="txtfieldName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
             <Label fx:id="lblEmail" prefHeight="17.0" prefWidth="150.0" text="Email">
                <font>
                   <Font name="Bodoni MT" size="16.0" />
                </font></Label>
-            <TextField fx:id="txtfieldName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
+            <TextField fx:id="txtfieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
             <Label fx:id="lblPassword" prefHeight="17.0" prefWidth="150.0" text="Password">
                <font>
                   <Font name="Bodoni MT" size="16.0" />

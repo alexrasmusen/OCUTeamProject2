@@ -14,7 +14,7 @@
       "name": "f",
       "GsF": "G",
       "hankhill@g.com": "T",
-      "name2": "R",
+      "name2": "T",
       "fortnite": "T",
       "name1": "P",
       "email": "t",
@@ -35,6 +35,16 @@
   {
     "courseName": "math",
     "professor": "1",
+    "students": {}
+  },
+  {
+    "courseName": "Gaming",
+    "professor": "Professor Goat",
+    "students": {}
+  },
+  {
+    "courseName": "W class",
+    "professor": "Professor Goat",
     "students": {}
   }
 ]

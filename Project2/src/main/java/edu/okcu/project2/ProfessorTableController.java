@@ -71,7 +71,7 @@ public class ProfessorTableController {
         btnClear.setDisable(false);
     }
 
-    public void onUpdateButtonClick(ActionEvent actionEvent){
+    public void onViewClassInfo(ActionEvent actionEvent){
         Course selectedCourse = (Course) professorTableview.getSelectionModel().getSelectedItem();
         if (selectedCourse != null) {
             try {

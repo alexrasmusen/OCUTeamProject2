@@ -9,12 +9,12 @@
       <Label fx:id="lblWelcomeMessage" layoutX="199.0" layoutY="14.0" text="Welcome Professor" />
       <TableView fx:id="professorTableview" layoutX="10.0" layoutY="63.0" prefHeight="219.0" prefWidth="483.0">
         <columns>
-           <TableColumn fx:id="classColumn" prefWidth="481.0" text="Classes" />
+           <TableColumn fx:id="classColumn" prefWidth="408.0" text="Classes" />
             <!--<TableColumn prefWidth="74.0" text="View" />-->
         </columns>
       </TableView>
       <Label layoutX="110.0" layoutY="37.0" text="To view your students, select a class and press access" />
-      <HBox alignment="CENTER" layoutX="154.0" layoutY="314.0" prefHeight="31.0" prefWidth="193.0">
+      <HBox layoutX="154.0" layoutY="314.0" prefHeight="31.0" prefWidth="193.0">
          <children>
             <Label prefHeight="26.0" prefWidth="35.0" text="Class:">
                <font>
@@ -24,13 +24,12 @@
             <TextField fx:id="txtFieldClass" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="39.0" layoutY="372.0" prefHeight="31.0" prefWidth="423.0" spacing="30.0">
+      <HBox layoutX="120.0" layoutY="381.0" prefHeight="31.0" prefWidth="281.0" spacing="30.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onAccessButtonClick" text="Update" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onViewClassInfo" text="Update" />
             <Button mnemonicParsing="false" text="Delete" />
-            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
-            <Button fx:id="btnSignout" mnemonicParsing="false" onAction="#onSignoutButtonClick" text="Signout" />
+            <Button mnemonicParsing="false" text="Clear" />
          </children>
       </HBox>
    </children>

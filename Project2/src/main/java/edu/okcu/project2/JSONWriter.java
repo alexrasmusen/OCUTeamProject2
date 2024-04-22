@@ -19,7 +19,7 @@ public class JSONWriter {
     //name of our file
     private static final String FILE = "classes.txt";
 
-    public static List<Course> courses;
+    private static List<Course> courses;
 
 
     /**
@@ -268,7 +268,7 @@ public class JSONWriter {
                 var items = row.split(" , ");
                 var IDFromFile = items[0];
                 var hashedPassword = items[3];
-                //check if the student name is correct
+                //check if the student ID is correct
                 if (IDFromFile.equals(student.getID())) {
                     currentInfo.append(student.ID).append(" , ").append(student.getName()).append(" , ").append(student.getEmail()).append(" , ").append(hashedPassword).append("\n");
                 } else {

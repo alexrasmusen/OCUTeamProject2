@@ -11,6 +11,7 @@
       "shinji": "B-",
       "q": "t",
       "w": "t",
+      "name": "F",
       "GsF": "G",
       "hankhill@g.com": "T",
       "name2": "T",
@@ -24,9 +25,7 @@
   {
     "courseName": "Intro to dance",
     "professor": "1",
-    "students": {
-      "name": "none"
-    }
+    "students": {}
   },
   {
     "courseName": "dance",
@@ -41,13 +40,17 @@
   {
     "courseName": "Gaming",
     "professor": "Professor Goat",
-    "students": {}
+    "students": {
+      "name": "none"
+    }
   },
   {
     "courseName": "W class",
     "professor": "Professor Goat",
     "students": {
-      "name": "none"
+      "Satoru Gojo": "Honored One",
+      "satoru gojo": "R+",
+      "name2": "R+"
     }
   }
 ]

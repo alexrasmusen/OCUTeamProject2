@@ -4,6 +4,8 @@ import com.google.gson.*;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 
@@ -123,6 +125,22 @@ public class JSONWriter {
     }
 
     /**
+     * Extra version of the method to be called by the students. This version is just for enrolling yourself but not having a grade yet
+     * @param course <-- the course to enroll in
+     * @param name <-- the student's name
+     */
+    public static void updateStudentAndGrade(Course course, String name) {
+
+        for (Course c : courses) {
+            if (c.equals(course)) {
+                c.updateStudent(name, "none");
+            }
+        }
+        gsonToJson();
+
+    }
+
+    /**
      * This method is used to remove a student from the course. It will then write the updated list to the file.
      *
      * @param course <-- the course to remove the student from
@@ -226,6 +244,20 @@ public class JSONWriter {
         }
     }
 
+    public static void initialTableRefreshForStudentView(TableView tableView, Student student) {
+        tableView.getItems().clear();
+
+        for (Course c : courses) {
+                for (String key : c.students.keySet()) {
+                    if (key.equalsIgnoreCase(student.getName())) {
+
+                        tableView.getItems().add(c);
+                    }
+                }
+            }
+        }
+
+
     public static void updateStudentInfo(Course course, TableView tableView, Student student) {
         File file = new File("Students.txt");
         StringBuilder currentInfo = new StringBuilder();
@@ -258,10 +290,17 @@ public class JSONWriter {
         }
     }
 
-    public static void getCoursesOffered(ComboBox comboBox) {
-        for (Course course : courses) {
-            comboBox.getItems().add(course);
-        }
+    /**
+     * Method to populate the combo box with the courses offered
+     * @param comboBox <-- the combo box to populate
+     */
+    public static void getCoursesOffered(ComboBox<Course> comboBox) {
+        //clear current data
+        comboBox.getItems().clear();
+        //convert the list to an observable list
+        ObservableList<Course> observableCourses = FXCollections.observableArrayList(courses);
+        //add it to the combo box
+        comboBox.setItems(observableCourses);
     }
 
     /**
@@ -278,4 +317,6 @@ public class JSONWriter {
 
         }
     }
+
+
 }

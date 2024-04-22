@@ -7,12 +7,16 @@ public class Course {
     //for some reason, these have to be public or GSON struggles with writing them
     public String courseName;
     public String professor;
+    //hashmap to pair student and grade
     public HashMap<String, String> students = new HashMap<>();
 
 
     public Course(String professor, String courseName) {
         setProfessor(professor);
         setCourseName(courseName);
+    }
+    public HashMap<String, String> getGrades() {
+        return students;
     }
 
     public void updateStudent(String student, String grade) {

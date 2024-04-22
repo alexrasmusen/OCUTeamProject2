@@ -44,7 +44,7 @@
         </VBox>
       <ImageView fitHeight="420.0" fitWidth="186.0" layoutX="270.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@uiDesign.png" />
+            <Image url="@uiDesignv3-01.png" />
          </image></ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="1.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="280.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="1.0" layoutY="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />

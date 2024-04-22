@@ -52,5 +52,10 @@
       "satoru gojo": "R+",
       "name2": "R+"
     }
+  },
+  {
+    "courseName": "science",
+    "professor": "2",
+    "students": {}
   }
 ]

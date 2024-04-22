@@ -6,55 +6,55 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.WelcomeController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.WelcomeController">
    <children>
-      <Label fx:id="welcomeText" alignment="CENTER" layoutX="22.0" layoutY="5.0" prefHeight="55.0" prefWidth="311.0" text="Welcome!" wrapText="true">
+      <Label fx:id="welcomeText" alignment="CENTER" layoutX="22.0" layoutY="11.0" prefHeight="55.0" prefWidth="362.0" text="Welcome!" wrapText="true">
          <font>
-            <Font size="14.0" />
+            <Font name="Bodoni MT" size="20.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="20.0" layoutY="85.0" prefHeight="38.0" prefWidth="311.0" text="Student">
+      <Label alignment="CENTER" layoutX="20.0" layoutY="103.0" prefHeight="38.0" prefWidth="362.0" text="Student">
          <font>
             <Font name="Bodoni MT" size="30.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="20.0" layoutY="122.0" prefHeight="37.0" prefWidth="311.0" spacing="40.0">
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="141.0" prefHeight="37.0" prefWidth="362.0" spacing="40.0">
          <children>
             <Button fx:id="StudentSUButton" alignment="CENTER" mnemonicParsing="false" onAction="#onStuSignUpButtonClick" text="SignUp" />
             <Button fx:id="StudentLButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onStuLoginButtonClick" text="Login" textAlignment="CENTER" />
          </children>
       </HBox>
-      <Label alignment="CENTER" layoutX="19.0" layoutY="184.0" prefHeight="38.0" prefWidth="311.0" text="Professor">
+      <Label alignment="CENTER" layoutX="19.0" layoutY="206.0" prefHeight="38.0" prefWidth="362.0" text="Professor">
          <font>
             <Font name="Bodoni MT" size="30.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="19.0" layoutY="226.0" prefHeight="25.0" prefWidth="311.0" spacing="40.0">
+      <HBox alignment="CENTER" layoutX="19.0" layoutY="253.0" prefHeight="25.0" prefWidth="362.0" spacing="40.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onProfSignUpButtonClick" text="SignUp" />
             <Button mnemonicParsing="false" onAction="#onProfLoginButtonClick" text="Login" />
          </children>
       </HBox>
-      <ImageView fitHeight="89.0" fitWidth="350.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="136.0" fitWidth="400.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@uiDesign2-02.png" />
+            <Image url="@uiDesignv4-02.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="278.0" layoutX="330.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-1.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="278.0" layoutX="3.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="350.0" layoutX="333.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="352.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="-1.0" layoutY="164.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
-      <Label alignment="CENTER" layoutX="20.0" layoutY="30.0" prefHeight="37.0" prefWidth="311.0" text="Please choose your appropiate occupation">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="300.0" layoutX="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-1.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-1.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="306.0" layoutX="3.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutY="291.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="401.0" layoutX="383.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="401.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="-1.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="40.0" prefHeight="37.0" prefWidth="362.0" text="Please choose your appropiate occupation" underline="true">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="-1.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="-1.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
    </children>
 </AnchorPane>

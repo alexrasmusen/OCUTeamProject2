@@ -15,5 +15,10 @@
       "fortnite": "T",
       "name1": "P"
     }
+  },
+  {
+    "courseName": "science",
+    "professor": "2",
+    "students": {}
   }
 ]

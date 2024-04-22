@@ -11,6 +11,7 @@
    <children>
       <VBox alignment="CENTER" fillWidth="false" layoutX="21.0" layoutY="90.0" prefHeight="297.0" prefWidth="227.0" spacing="10.0">
          <children>
+            <Label fx:id="lblUnsuccessful" />
             <Label fx:id="lblEmail" prefHeight="17.0" prefWidth="151.0" text="Email">
                <font>
                   <Font name="Bodoni MT" size="18.0" />

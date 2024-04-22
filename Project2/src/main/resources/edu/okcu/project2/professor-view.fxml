@@ -27,7 +27,7 @@
       <HBox layoutX="120.0" layoutY="381.0" prefHeight="31.0" prefWidth="281.0" spacing="30.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onViewClassInfo" text="Update" />
             <Button mnemonicParsing="false" text="Delete" />
             <Button mnemonicParsing="false" text="Clear" />
          </children>

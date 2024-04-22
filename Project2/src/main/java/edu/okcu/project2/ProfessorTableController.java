@@ -28,6 +28,8 @@ public class ProfessorTableController {
     @FXML
     Button btnClear= new Button();
     @FXML
+    Button btnSignout = new Button();
+    @FXML
     Label lblWelcomeMessage;
 
     Professor professor;
@@ -66,9 +68,10 @@ public class ProfessorTableController {
             JSONWriter.updateTableForProfessors(professorTableview, professor);
             professorTableview.refresh();
         }
+        btnClear.setDisable(false);
     }
 
-    public void onUpdateButtonClick(ActionEvent actionEvent){
+    public void onViewClassInfo(ActionEvent actionEvent){
         Course selectedCourse = (Course) professorTableview.getSelectionModel().getSelectedItem();
         if (selectedCourse != null) {
             try {
@@ -78,7 +81,7 @@ public class ProfessorTableController {
                 ProfessorViewStudentsController controller = loader.getController();
                 controller.setCourse(selectedCourse);
                 Stage stage = new Stage();
-                Scene scene = new Scene(root, 500, 500);
+                Scene scene = new Scene(root, 450, 500);
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();
@@ -101,5 +104,13 @@ public class ProfessorTableController {
 
     }
 
+    public void onClearButtonClick(ActionEvent actionEvent){
+        txtFieldClass.setText("");
+    }
+
+    public void onSignoutButtonClick(ActionEvent actionEvent){
+        Stage currentStage = (Stage) btnSignout.getScene().getWindow();
+        currentStage.close();
+    }
 
 }

@@ -4,6 +4,9 @@ import com.google.gson.*;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 
 import java.io.*;
@@ -73,7 +76,6 @@ public class JSONWriter {
      */
     public static void updateTableForStudents(TableView tableView, Student student, Course selectedCourse) {
         try {
-
             //loop through students to list
             for (Course course : courses) {
                 //if the student is in the course, add it to the table
@@ -87,9 +89,7 @@ public class JSONWriter {
     }
 
     /**
-     * This is a method to read in the existing courses from the file.
-     *
-     * @return <-- returns a list of courses. if no courses are present, returns a new list.
+     * This is a method to read in the existing courses from the file "classes.txt"
      */
     public static void readCourses() {
         try {
@@ -121,6 +121,22 @@ public class JSONWriter {
         }
         gsonToJson();
         getStudentInfo(name, tableView, grade, course);
+
+    }
+
+    /**
+     * Extra version of the method to be called by the students. This version is just for enrolling yourself but not having a grade yet
+     * @param course <-- the course to enroll in
+     * @param name <-- the student's name
+     */
+    public static void updateStudentAndGrade(Course course, String name) {
+
+        for (Course c : courses) {
+            if (c.equals(course)) {
+                c.updateStudent(name, "none");
+            }
+        }
+        gsonToJson();
 
     }
 
@@ -159,11 +175,11 @@ public class JSONWriter {
             while ((row = reader.readLine()) != null) {
                 var items = row.split(" , ");
                 var IDFromFile = items[0];
-                var nameFromFile = items[2];
-                var emailFromFile = items[1];
+                var nameFromFile = items[1];
+                var emailFromFile = items[2];
 
                 //check if the student name is correct
-                if (nameFromFile.equals(studentName)) {
+                if (nameFromFile.equalsIgnoreCase(studentName)) {
                     Student student = new Student(IDFromFile, nameFromFile, emailFromFile, grade);
                     updateTableForStudents(tableView, student, course);
                 }
@@ -228,6 +244,20 @@ public class JSONWriter {
         }
     }
 
+    public static void initialTableRefreshForStudentView(TableView tableView, Student student) {
+        tableView.getItems().clear();
+
+        for (Course c : courses) {
+                for (String key : c.students.keySet()) {
+                    if (key.equalsIgnoreCase(student.getName())) {
+
+                        tableView.getItems().add(c);
+                    }
+                }
+            }
+        }
+
+
     public static void updateStudentInfo(Course course, TableView tableView, Student student) {
         File file = new File("Students.txt");
         StringBuilder currentInfo = new StringBuilder();
@@ -261,6 +291,19 @@ public class JSONWriter {
     }
 
     /**
+     * Method to populate the combo box with the courses offered
+     * @param comboBox <-- the combo box to populate
+     */
+    public static void getCoursesOffered(ComboBox<Course> comboBox) {
+        //clear current data
+        comboBox.getItems().clear();
+        //convert the list to an observable list
+        ObservableList<Course> observableCourses = FXCollections.observableArrayList(courses);
+        //add it to the combo box
+        comboBox.setItems(observableCourses);
+    }
+
+    /**
      * This method is used so that I didn't have to copy and paste some stuff. It will write the list of courses to the file.
      */
     private static void gsonToJson() {
@@ -274,4 +317,6 @@ public class JSONWriter {
 
         }
     }
+
+
 }

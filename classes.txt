@@ -3,17 +3,51 @@
     "courseName": "Real Class",
     "professor": "Professor Goat",
     "students": {
-      "shinji": "B-",
-      "q": "B-",
+      "realstudent": "Y",
       "hank": "T",
-      "w": "F+",
       "Hunk": "T",
+      "Junk": "T",
+      "goat": "T",
+      "shinji": "B-",
+      "q": "t",
+      "w": "t",
       "GsF": "G",
       "hankhill@g.com": "T",
-      "Junk": "T",
-      "goat": "L",
+      "name2": "T",
       "fortnite": "T",
-      "name1": "P"
+      "name1": "P",
+      "email": "t",
+      "alex@gmail.com": "Y",
+      "goat@gmail.com": "r"
+    }
+  },
+  {
+    "courseName": "Intro to dance",
+    "professor": "1",
+    "students": {
+      "name": "none"
+    }
+  },
+  {
+    "courseName": "dance",
+    "professor": "1",
+    "students": {}
+  },
+  {
+    "courseName": "math",
+    "professor": "1",
+    "students": {}
+  },
+  {
+    "courseName": "Gaming",
+    "professor": "Professor Goat",
+    "students": {}
+  },
+  {
+    "courseName": "W class",
+    "professor": "Professor Goat",
+    "students": {
+      "name": "none"
     }
   },
   {

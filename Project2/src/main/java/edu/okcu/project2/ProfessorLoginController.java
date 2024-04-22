@@ -31,7 +31,7 @@ public class ProfessorLoginController extends LoginController {
                 ProfessorTableController controller = loader.getController();
                 controller.setProfessor(professor);
                 Stage stage = new Stage();
-                Scene scene = new Scene(root, 350, 300);
+                Scene scene = new Scene(root, 500, 450);
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();

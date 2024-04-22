@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class LoginController {
 
     @FXML
-    private Label lblLogin, lblEmail, lblPassword;
+    private Label lblLogin, lblEmail, lblPassword, lblUnsuccessful;
     @FXML
     private TextField txtfieldEmail, txtfieldPassword;
     @FXML
@@ -56,8 +56,11 @@ public class LoginController {
                     setName(nameFromFile);
                     return true;
                 }
+                else {
+                    lblUnsuccessful.setText("Login Unsuccessful");
+                    }
+                }
             }
-        }
         return false;
     }
 

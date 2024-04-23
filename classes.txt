@@ -27,15 +27,13 @@
   {
     "courseName": "Intro to dance",
     "professor": "1",
-    "students": {}
+    "students": {
+      "": "",
+      "1": "A"
+    }
   },
   {
     "courseName": "dance",
-    "professor": "1",
-    "students": {}
-  },
-  {
-    "courseName": "math",
     "professor": "1",
     "students": {}
   },
@@ -57,6 +55,13 @@
     "students": {
       "luke": "F++",
       "Luke": "T-"
+    }
+  },
+  {
+    "courseName": "coloring",
+    "professor": "1",
+    "students": {
+      "1": "A"
     }
   }
 ]

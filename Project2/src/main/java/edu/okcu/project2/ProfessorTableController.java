@@ -86,7 +86,7 @@ public class ProfessorTableController extends AbstractStudentProfessorController
                 controller.setCourse(selectedCourse);
                 controller.setProfessor(professor);
                 Stage stage = new Stage();
-                Scene scene = new Scene(root, 450, 500);
+                Scene scene = new Scene(root, 550, 450);
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();

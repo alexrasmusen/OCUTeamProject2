@@ -9,7 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class ProfessorTableController {
+public class ProfessorTableController extends AbstractStudentProfessorController{
 
     @FXML
     TableView professorTableview = new TableView<>();
@@ -20,15 +20,15 @@ public class ProfessorTableController {
     @FXML
     TextField txtFieldClass;
     @FXML
-    Button btnAdd = new Button();
+    Button btnAdd;
     @FXML
-    Button btnUpdate= new Button();
+    Button btnUpdate;
     @FXML
-    Button btnDelete= new Button();
+    Button btnDelete;
     @FXML
-    Button btnClear= new Button();
+    Button btnClear;
     @FXML
-    Button btnSignout = new Button();
+    Button btnSignout;
     @FXML
     Label lblWelcomeMessage;
 
@@ -37,9 +37,13 @@ public class ProfessorTableController {
     public void initialize () {
         btnAdd.setDisable(false);
         btnUpdate.setDisable(false);
-        btnDelete.setDisable(true);
+        btnDelete.setDisable(false);
         btnClear.setDisable(true);
-
+        //make array of buttons
+        Button[] buttons = {btnAdd,btnClear,btnDelete,btnSignout,btnUpdate};
+        //resize all the buttons so the text doesn't cut off
+        Helper.setButtonSize(buttons);
+        //??? profit
         classColumn.setCellValueFactory(new PropertyValueFactory<Course, String>("courseName"));
 
     }
@@ -80,6 +84,7 @@ public class ProfessorTableController {
                 //open up the professor's student view
                 ProfessorViewStudentsController controller = loader.getController();
                 controller.setCourse(selectedCourse);
+                controller.setProfessor(professor);
                 Stage stage = new Stage();
                 Scene scene = new Scene(root, 450, 500);
                 Helper.setDarkTheme(scene);
@@ -97,20 +102,21 @@ public class ProfessorTableController {
     }
 
     public void onDeleteButtonClick(ActionEvent actionEvent){
-
+        Course selectedCourse = (Course) professorTableview.getSelectionModel().getSelectedItem();
+        if (selectedCourse != null) {
+            JSONWriter.removeCourse(selectedCourse, professorTableview);
+            JSONWriter.readCourses();
+            JSONWriter.updateTableForProfessors(professorTableview, professor);
+        }
     }
 
-    public void onAccessButtonClick(ActionEvent actionEvent){
-
-    }
 
     public void onClearButtonClick(ActionEvent actionEvent){
         txtFieldClass.setText("");
     }
 
-    public void onSignoutButtonClick(ActionEvent actionEvent){
-        Stage currentStage = (Stage) btnSignout.getScene().getWindow();
-        currentStage.close();
+    public void onSignoutButtonClick() {
+        super.onSignoutButtonClick(btnSignout);
     }
 
 }

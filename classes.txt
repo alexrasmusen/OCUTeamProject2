@@ -10,6 +10,8 @@
       "goat": "T",
       "shinji": "B-",
       "q": "t",
+      "Satoru Gojo": "Honored One",
+      "satoru gojo": "R",
       "w": "t",
       "name": "F",
       "GsF": "G",
@@ -38,24 +40,23 @@
     "students": {}
   },
   {
-    "courseName": "Gaming",
-    "professor": "Professor Goat",
-    "students": {
-      "name": "none"
-    }
-  },
-  {
-    "courseName": "W class",
-    "professor": "Professor Goat",
-    "students": {
-      "Satoru Gojo": "Honored One",
-      "satoru gojo": "R+",
-      "name2": "R+"
-    }
-  },
-  {
     "courseName": "science",
     "professor": "2",
     "students": {}
+  },
+  {
+    "courseName": "Baller class",
+    "professor": "Professor Goat",
+    "students": {
+      "name": "P"
+    }
+  },
+  {
+    "courseName": "Advanced Calculus",
+    "professor": "Professor Henry",
+    "students": {
+      "luke": "F++",
+      "Luke": "T-"
+    }
   }
 ]

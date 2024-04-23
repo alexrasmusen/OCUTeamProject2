@@ -22,7 +22,7 @@ public class ProfessorLoginController extends LoginController {
 
 
 
-                //initialize a new student with the found name and ID
+                //initialize a new professor with the found name and ID
                 professor = new Professor(getName(), getID());
                 // we need an FXML loader. this will allow us to get the FXML file and the controller
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("professor-view.fxml"));
@@ -34,7 +34,7 @@ public class ProfessorLoginController extends LoginController {
                 Scene scene = new Scene(root, 500, 450);
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
-                stage.show();
+               stage.show();
 
                 //close login window
                 super.closeCurrentWindow();

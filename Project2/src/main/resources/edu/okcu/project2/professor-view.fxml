@@ -24,12 +24,13 @@
             <TextField fx:id="txtFieldClass" />
          </children>
       </HBox>
-      <HBox layoutX="120.0" layoutY="381.0" prefHeight="31.0" prefWidth="281.0" spacing="30.0">
+      <HBox alignment="CENTER" layoutX="58.0" layoutY="379.0" prefHeight="31.0" prefWidth="281.0" spacing="25.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
             <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#onViewClassInfo" text="Update" />
-            <Button mnemonicParsing="false" text="Delete" />
-            <Button mnemonicParsing="false" text="Clear" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+            <Button fx:id="btnSignout" mnemonicParsing="false" onAction="#onSignoutButtonClick" text="Sign Out" />
          </children>
       </HBox>
    </children>

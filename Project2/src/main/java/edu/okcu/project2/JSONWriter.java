@@ -303,6 +303,11 @@ public class JSONWriter {
         comboBox.setItems(observableCourses);
     }
 
+    public static void removeCourse(Course course, TableView tableView) {
+        courses.remove(course);
+        gsonToJson();
+    }
+
     /**
      * This method is used so that I didn't have to copy and paste some stuff. It will write the list of courses to the file.
      */

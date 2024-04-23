@@ -15,9 +15,9 @@
       </TableView>
       <HBox layoutX="127.0" layoutY="336.0" prefHeight="28.0" prefWidth="247.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
-            <Button mnemonicParsing="false" text="Update" />
-            <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+            <Button fx:id="btnSignout" mnemonicParsing="false" onAction="#onSignoutButtonClick" text="Sign Out" />
          </children>
       </HBox>
       <ComboBox fx:id="comboCourses" layoutX="174.0" layoutY="294.0" prefWidth="150.0" />

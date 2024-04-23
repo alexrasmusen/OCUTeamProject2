@@ -3,12 +3,18 @@ package edu.okcu.project2;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 
-public class ProfessorViewStudentsController{
+public class ProfessorViewStudentsController extends AbstractStudentProfessorController{
 
     @FXML
     TableView<Person> tableView = new TableView<>();
@@ -31,13 +37,10 @@ public class ProfessorViewStudentsController{
     @FXML
     Label lblError;
     @FXML
-    Button btnAdd;
-    @FXML
-    Button btnUpdate;
-    @FXML
-    Button btnDelete;
+    Button btnAdd, btnUpdate, btnDelete, btnSignout, btnReturn, btnClear;
 
-    private Person selectedPerson;
+
+    private Professor professor;
     ObservableList<Person> people;
 
     Course course;
@@ -48,6 +51,9 @@ public class ProfessorViewStudentsController{
         btnAdd.setDisable(false);
         btnUpdate.setDisable(true);
         btnDelete.setDisable(true);
+        //resize array of buttons
+        Button [] buttons = {btnAdd,btnDelete,btnUpdate,btnSignout,btnReturn,btnClear};
+        Helper.setButtonSize(buttons);
 
         IDColumn.setCellValueFactory(new PropertyValueFactory<Student, Integer>("ID"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
@@ -79,28 +85,6 @@ public class ProfessorViewStudentsController{
         });
 
 
-        /*
-        tableView.setItems(people);
-
-        TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
-        ObservableList<Person> selectedItems = selectionModel.getSelectedItems();
-
-        selectedItems.addListener(new ListChangeListener<Person>() {
-            @Override
-            public void onChanged(Change<? extends Person> change) {
-                btnAdd.setDisable(true);
-                btnUpdate.setDisable(false);
-                btnDelete.setDisable(false);
-
-                System.out.println(change.getList());
-                selectedPerson = change.getList().get(0);
-                lblID.setText(String.valueOf(selectedPerson.getID()));
-                txtEmail.setText(selectedPerson.getEmail());
-                txtName.setText(selectedPerson.getName());
-            }
-        });
-
-         */
     }
 
 
@@ -111,30 +95,11 @@ public class ProfessorViewStudentsController{
         tableView.refresh();
 
 
-        /*
-        var newPerson = new Student();
-        newPerson.setID(lblID.getText());
-        newPerson.setName(txtName.getText());
-        newPerson.setEmail(txtEmail.getText());
-        if (newPerson == new Student()){
-            lblError.setText("Student Already added. Would you like to update?");
-        } else {
-            people.add(newPerson);
-        }
-        */
+
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
-        /*
-        for (var record : people) {
-            if (Objects.equals(record.getID(), selectedPerson.getID())) {
-                record.setID(lblID.getText());
-                record.setName(txtName.getText());
-                record.setEmail(txtEmail.getText());
-            }
-        }
 
-         */
         Student student = new Student(lblID.getText(), txtName.getText(), txtEmail.getText(), txtGrade.getText());
         JSONWriter.updateStudentInfo(course, tableView, student);
         tableView.refresh();
@@ -151,13 +116,6 @@ public class ProfessorViewStudentsController{
         JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
         tableView.refresh();
 
-        /*
-        if(selectedPerson != null){
-            people.remove(selectedPerson);
-        } else {
-            lblError.setText("Please select a student");
-        }
-         */
     }
 
     public void onClearButtonClick(){
@@ -172,12 +130,23 @@ public class ProfessorViewStudentsController{
         btnDelete.setDisable(true);
     }
 
-    public void onReturnButtonClick(ActionEvent actionEvent){
+    public void onReturnButtonClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("professor-view.fxml"));
+        Parent root = loader.load();
+        ProfessorTableController controller = loader.getController();
+        controller.setProfessor(professor);
+        Stage stage = new Stage();
+        Scene scene = new Scene(root, 500, 450);
+        Helper.setDarkTheme(scene);
+        stage.setScene(scene);
+        stage.show();
 
+        Stage currentStage = (Stage) btnSignout.getScene().getWindow();
+        currentStage.close();
     }
 
-    public void onSignoutButtonClick(ActionEvent actionEvent){
-
+    public void onSignoutButtonClick() {
+        super.onSignoutButtonClick(btnSignout);
     }
 
     public void setCourse(Course course){
@@ -187,14 +156,7 @@ public class ProfessorViewStudentsController{
         JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
     }
 
-    public Course getCourse(){
-        return course;
-    }
-
-    private void getCourseInfo() {
-
-    }
-
-    public void onSignOutButtonClick(ActionEvent actionEvent) {
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 }

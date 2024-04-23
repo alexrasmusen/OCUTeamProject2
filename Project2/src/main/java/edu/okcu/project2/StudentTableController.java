@@ -1,10 +1,14 @@
 package edu.okcu.project2;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-public class StudentTableController {
+public class StudentTableController extends AbstractStudentProfessorController{
 
     @FXML
     ComboBox comboCourses;
@@ -16,6 +20,8 @@ public class StudentTableController {
     TableColumn<Course, String> columnGrades;
     @FXML
     Label lblWelcome;
+    @FXML
+    Button btnAdd, btnDelete, btnSignout;
     Student student;
 
 
@@ -27,6 +33,10 @@ public class StudentTableController {
     }
 
     public void initialize() {
+        //set size of buttons
+        Button[] buttons =  {btnAdd, btnDelete,btnSignout};
+        Helper.setButtonSize(buttons);
+
         //read the courses from file
         JSONWriter.readCourses();
         //populate the combo box with the courses
@@ -61,9 +71,9 @@ public class StudentTableController {
         JSONWriter.removeStudent(course, student.getName());
         studentTableView.getItems().remove(course);
     }
-/*
-    public void onUpdateButtonClick(ActionEvent actionEvent){
 
-    }*/
+    public void onSignoutButtonClick() {
+        super.onSignoutButtonClick(btnSignout);
+    }
 
 }

@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="407.0" fitWidth="150.0" layoutX="273.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@uiDesign.png" />
+            <Image url="@uiDesignv3-01.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="5.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="269.0" />

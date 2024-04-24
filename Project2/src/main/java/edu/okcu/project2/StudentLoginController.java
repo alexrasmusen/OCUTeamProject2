@@ -32,7 +32,7 @@ public class StudentLoginController extends LoginController {
                 StudentTableController controller = loader.getController();
                 controller.setStudent(student);
                 Stage stage = new Stage();
-                Scene scene = new Scene(root, 500, 450);
+                Scene scene = new Scene(root, 500, 350);
                 Helper.setDarkTheme(scene);
                 stage.setScene(scene);
                 stage.show();

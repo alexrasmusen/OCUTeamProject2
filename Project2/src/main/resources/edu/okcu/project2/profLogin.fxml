@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.ProfessorLoginController">
     <children>
-      <VBox alignment="CENTER" fillWidth="false" layoutX="22.0" layoutY="103.0" prefHeight="277.0" prefWidth="233.0" spacing="10.0">
+      <VBox alignment="CENTER" fillWidth="false" layoutX="154.0" layoutY="103.0" prefHeight="277.0" prefWidth="233.0" spacing="10.0">
          <children>
             <Label fx:id="lblUnsuccessful" />
               <Label fx:id="lblEmail" prefHeight="22.0" prefWidth="150.0" text="Email">
@@ -42,7 +42,7 @@
             </Button>
               <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onSecondCancelButtonClick" text="Cancel" />
          </children></VBox>
-        <VBox alignment="CENTER" layoutX="22.0" layoutY="24.0" prefHeight="55.0" prefWidth="233.0">
+        <VBox alignment="CENTER" layoutX="154.0" layoutY="23.0" prefHeight="55.0" prefWidth="233.0">
          <children>
             <Label text="Professor Login">
                <font>
@@ -50,19 +50,19 @@
                </font></Label>
          </children>
         </VBox>
-      <ImageView fitHeight="420.0" fitWidth="186.0" layoutX="256.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="420.0" fitWidth="186.0" layoutX="-16.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@uiDesign.png" />
+            <Image url="@uiDesignv3-01.png" />
          </image></ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-1.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="382.0" layoutX="5.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="-4.0" layoutY="381.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="281.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="6.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="382.0" layoutX="254.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="135.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="382.0" layoutX="137.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="146.0" layoutY="381.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="251.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutX="134.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="382.0" layoutX="386.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="407.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="9.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutX="137.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="407.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="382.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="382.0" layoutX="258.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="382.0" layoutX="132.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="382.0" layoutX="390.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
     </children>
 </AnchorPane>

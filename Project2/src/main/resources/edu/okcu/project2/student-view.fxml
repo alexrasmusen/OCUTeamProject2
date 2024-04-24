@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.okcu.project2.StudentTableController">
    <children>
-      <Label fx:id="lblWelcome" layoutX="201.0" layoutY="25.0" text="Welcome Student " />
-      <Label layoutX="163.0" layoutY="48.0" text="Below are your registered classes" />
-      <TableView fx:id="studentTableView" layoutX="48.0" layoutY="81.0" prefHeight="200.0" prefWidth="405.0">
+      <ImageView fitHeight="279.0" fitWidth="478.0" layoutX="11.0" layoutY="221.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uiDesignv4-02.png" />
+         </image></ImageView>
+      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="21.0" layoutY="27.0" prefHeight="21.0" prefWidth="460.0" text="Welcome Student ">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="21.0" layoutY="45.0" prefHeight="17.0" prefWidth="460.0" text="Below are your registered classes" />
+      <TableView fx:id="studentTableView" layoutX="21.0" layoutY="64.0" prefHeight="185.0" prefWidth="460.0">
         <columns>
-          <TableColumn fx:id="columnClasses" prefWidth="340.5999984741211" text="Classes" />
-            <TableColumn fx:id="columnGrades" prefWidth="140.20004272460938" text="Grade" />
+          <TableColumn fx:id="columnClasses" prefWidth="223.99999046325684" text="Classes" />
+            <TableColumn fx:id="columnGrades" maxWidth="5089.0" prefWidth="235.3333282470703" text="Grade" />
         </columns>
       </TableView>
-      <HBox layoutX="127.0" layoutY="336.0" prefHeight="28.0" prefWidth="247.0" spacing="50.0">
+      <HBox alignment="CENTER" layoutX="22.0" layoutY="295.0" prefHeight="28.0" prefWidth="460.0" spacing="50.0">
          <children>
             <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
             <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
             <Button fx:id="btnSignout" mnemonicParsing="false" onAction="#onSignoutButtonClick" text="Sign Out" />
          </children>
       </HBox>
-      <ComboBox fx:id="comboCourses" layoutX="174.0" layoutY="294.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboCourses" layoutX="174.0" layoutY="260.0" prefWidth="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="326.0" layoutX="4.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="326.0" layoutX="480.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#182748" height="17.0" layoutY="332.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="17.0" layoutY="335.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="326.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d7d" height="326.0" layoutX="483.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
    </children>
 </AnchorPane>

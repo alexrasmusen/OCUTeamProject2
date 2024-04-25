@@ -35,6 +35,7 @@ public class LoginController {
 
     }
 
+    //This method makes sure the username and password match so login can happen
     public boolean onSecondLoginButtonClick() throws IOException {
         LoginEmail = txtfieldEmail.getText();
         LoginPassword = txtfieldPassword.getText();
@@ -68,6 +69,7 @@ public class LoginController {
         this.lblLogin = lblLogin;
     }
 
+    //This method closes the window and goes back to the welcome UI
     public void onSecondCancelButtonClick() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("welcome-view.fxml"));

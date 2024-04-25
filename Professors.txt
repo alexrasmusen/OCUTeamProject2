@@ -5,3 +5,5 @@ f41a74ab-0ee0-4f7d-b490-3647476def7d , waefjijwofa , jafewiofja , $2a$10$UbllOPJ
 1d4f0d08-bc02-4079-87bf-8a6e51ed6d74 , Professor Henry , p@gmail.com , $2a$10$sHXh/S5YxFm3PMRtEBBu/u.2ncMa9Z5S4zI2ymI.xFQiTWZmxDNxK
 68134948-122e-454e-baa4-0555afe5afc2 , 1 , 1 , $2a$10$cWzH6oKhzIWrFUArSzlFTex7YStpqQnAjEIRGvv0RtUeJ6bN0Q3DG
 c9ac636f-ee7c-4f32-9721-1d78c02bba35 , shifu , shifu@gmail.com , $2a$10$/EOZHQZqNb/cioEXEQ9gFeNWBFtYe745AnLSySBU5Zs/0ylMHtM4e
+8789d788-062f-4b15-a4e6-9d72700b6205 , a , a , $2a$10$LcBmM8W/okx/UvylQr2FhOQE3ZZZp9Hfq9hzv0WXRPlIhD/lpjDue
+c68b155e-771e-4690-811d-d6bad4950b97 , h , h , $2a$10$8djUTy7kLex.ydXHOmPOh.9m3Ka4rO4L/as.BJ7vYRVC2l9r19Z3.

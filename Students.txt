@@ -4,3 +4,5 @@ e8ed3f94-94d9-4f50-ae24-889ae3c2652a , Luke , luke@gmail.com , $2a$10$TB1Q6z85iu
 684e384d-757b-4c69-9588-5236a8eaf893 , 1 , 1 , $2a$10$nZNM.yAynC/V2NCUjjjyLOET3Lf5dQsfUBEMVEgKzgdW9QiwpwS4i
 74ca7f31-f6ac-434a-be56-48302c43480c , po , po@gmail.com , $2a$10$0hEfFjSiLiX8gQFg/GCmD.8840BaMGPlf3VJUTfoKHJaPlvZU5IfG
 2486a905-6da5-4f08-a180-5a573c463397 , jo , jo@gmail.com , $2a$10$AkZ911SwBK7grBEgUfb7b.AQsBYNOElJI4A5.69i1h895M8ze5V5.
+c2a345fb-02a8-418d-9af9-1aa0630d3faf , b , b , $2a$10$5b9f8VVtSdPAdGZqEALPzeMyGxM.8eTrrMi8WuThkEpxQ1j0xXchW
+a554ad1e-97ce-4db5-9e72-4f5371ebe609 , g , g , $2a$10$mauRe8ddEn.yiafCn7HjeezayvOhpFBwxVbstr32VfTV0EXgDnYry

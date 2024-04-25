@@ -18,7 +18,7 @@ public class WelcomeController {
     @FXML
     private Label welcomeText;
 
-
+    //call the four different fxmls
     @FXML
     protected void onStuLoginButtonClick() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("studentLogin.fxml"));

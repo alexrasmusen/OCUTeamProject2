@@ -1,5 +1,6 @@
 package edu.okcu.project2;
 
+//This class is for dummy data. I didn't end up using it but the application runs so I'm not going to leave it
 public abstract class Person {
     String name, ID, email;
 

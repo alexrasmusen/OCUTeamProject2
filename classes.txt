@@ -4,6 +4,7 @@
     "professor": "Professor Goat",
     "students": {
       "realstudent": "Y",
+      "b": "none",
       "hank": "T",
       "Hunk": "T",
       "Junk": "T",
@@ -29,7 +30,8 @@
     "professor": "1",
     "students": {
       "": "",
-      "1": "A"
+      "1": "A",
+      "g": "none"
     }
   },
   {
@@ -40,14 +42,17 @@
   {
     "courseName": "science",
     "professor": "2",
-    "students": {}
+    "students": {
+      "g": "none"
+    }
   },
   {
     "courseName": "Advanced Calculus",
     "professor": "Professor Henry",
     "students": {
       "luke": "F++",
-      "Luke": "T-"
+      "Luke": "T-",
+      "g": "none"
     }
   },
   {
@@ -69,5 +74,24 @@
     "courseName": "Kung Fu II",
     "professor": "shifu",
     "students": {}
+  },
+  {
+    "courseName": "dance",
+    "professor": "a",
+    "students": {
+      "b": "d"
+    }
+  },
+  {
+    "courseName": "dance",
+    "professor": "h",
+    "students": {}
+  },
+  {
+    "courseName": "fortnite",
+    "professor": "h",
+    "students": {
+      "g": "a-"
+    }
   }
 ]

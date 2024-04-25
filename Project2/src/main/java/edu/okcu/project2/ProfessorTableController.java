@@ -75,6 +75,7 @@ public class ProfessorTableController extends AbstractStudentProfessorController
         btnClear.setDisable(false);
     }
 
+    //This method loads in the professorViewStudents fxml
     public void onViewClassInfo(ActionEvent actionEvent){
         Course selectedCourse = (Course) professorTableview.getSelectionModel().getSelectedItem();
         if (selectedCourse != null) {
@@ -109,7 +110,6 @@ public class ProfessorTableController extends AbstractStudentProfessorController
             JSONWriter.updateTableForProfessors(professorTableview, professor);
         }
     }
-
 
     public void onClearButtonClick(ActionEvent actionEvent){
         txtFieldClass.setText("");

@@ -39,13 +39,11 @@ public class ProfessorViewStudentsController extends AbstractStudentProfessorCon
     @FXML
     Button btnAdd, btnUpdate, btnDelete, btnSignout, btnReturn, btnClear;
 
-
     private Professor professor;
     ObservableList<Person> people;
 
     Course course;
     HashMap<String, String> students;
-
 
     public void initialize (){
         btnAdd.setDisable(false);
@@ -83,23 +81,16 @@ public class ProfessorViewStudentsController extends AbstractStudentProfessorCon
                 btnAdd.setDisable(false);
             }
         });
-
-
     }
-
 
     public void onAddButtonClick(ActionEvent actionEvent){
         String studentName = txtName.getText();
         String grade = txtGrade.getText();
         JSONWriter.updateStudentAndGrade(tableView, course, studentName.toLowerCase(), grade);
         tableView.refresh();
-
-
-
     }
 
     public void onUpdateButtonClick(ActionEvent actionEvent){
-
         Student student = new Student(lblID.getText(), txtName.getText(), txtEmail.getText(), txtGrade.getText());
         JSONWriter.updateStudentInfo(course, tableView, student);
         tableView.refresh();
@@ -115,7 +106,6 @@ public class ProfessorViewStudentsController extends AbstractStudentProfessorCon
         //this was just supposed to be an initial method, but I realized it would still work here to refresh the table
         JSONWriter.initialTableRefreshForProfessorStudentView(course, tableView);
         tableView.refresh();
-
     }
 
     public void onClearButtonClick(){

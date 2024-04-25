@@ -2,3 +2,5 @@
 67d7df45-1c55-4628-8df9-b3a6a71b208f , Satoru Gojo , gojo@jujutsuhigh.edu , $2a$10$/UkXwmP4ogtlWHNm.NODnuix/7/WbnfabejEqvUFyIQmblcvuELi.
 e8ed3f94-94d9-4f50-ae24-889ae3c2652a , Luke , luke@gmail.com , $2a$10$TB1Q6z85iuBNTkOZc9SqFOA9wm.UvZABk21JSgC4zIyS6s2IpIcZq
 684e384d-757b-4c69-9588-5236a8eaf893 , 1 , 1 , $2a$10$nZNM.yAynC/V2NCUjjjyLOET3Lf5dQsfUBEMVEgKzgdW9QiwpwS4i
+74ca7f31-f6ac-434a-be56-48302c43480c , po , po@gmail.com , $2a$10$0hEfFjSiLiX8gQFg/GCmD.8840BaMGPlf3VJUTfoKHJaPlvZU5IfG
+2486a905-6da5-4f08-a180-5a573c463397 , jo , jo@gmail.com , $2a$10$AkZ911SwBK7grBEgUfb7b.AQsBYNOElJI4A5.69i1h895M8ze5V5.

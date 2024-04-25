@@ -43,13 +43,6 @@
     "students": {}
   },
   {
-    "courseName": "Baller class",
-    "professor": "Professor Goat",
-    "students": {
-      "name": "P"
-    }
-  },
-  {
     "courseName": "Advanced Calculus",
     "professor": "Professor Henry",
     "students": {
@@ -63,5 +56,18 @@
     "students": {
       "1": "A"
     }
+  },
+  {
+    "courseName": "Kung Fu I",
+    "professor": "shifu",
+    "students": {
+      "jo": "A++++",
+      "po": "F-"
+    }
+  },
+  {
+    "courseName": "Kung Fu II",
+    "professor": "shifu",
+    "students": {}
   }
 ]

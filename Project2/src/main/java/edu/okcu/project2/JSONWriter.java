@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 
@@ -170,6 +171,7 @@ public class JSONWriter {
     public static void getStudentInfo(String studentName, TableView tableView, String grade, Course course) {
         File file = new File("Students.txt");
 
+        boolean doesStudentHaveAccount = false;
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String row;
             while ((row = reader.readLine()) != null) {
@@ -180,9 +182,17 @@ public class JSONWriter {
 
                 //check if the student name is correct
                 if (nameFromFile.equalsIgnoreCase(studentName)) {
+                    doesStudentHaveAccount = true;
                     Student student = new Student(IDFromFile, nameFromFile, emailFromFile, grade);
                     updateTableForStudents(tableView, student, course);
                 }
+            }
+            if (!doesStudentHaveAccount) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Student not found. Please ensure the student has an account");
+                Helper.setDarkTheme(alert.getDialogPane().getScene());
+                alert.show();
+                removeStudent(course, studentName);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -201,6 +211,7 @@ public class JSONWriter {
     public static void getStudentInfo(Student student, TableView tableView, String grade, Course course) {
         File file = new File("Students.txt");
 
+
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String row;
             while ((row = reader.readLine()) != null) {
@@ -217,6 +228,8 @@ public class JSONWriter {
 
                 }
             }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }

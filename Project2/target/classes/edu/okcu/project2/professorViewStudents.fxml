@@ -12,7 +12,7 @@
          <image>
             <Image url="@uiDesignv5-01.png" />
          </image></ImageView>
-      <Label fx:id="lblWelcomeMessage" alignment="CENTER" layoutX="20.0" layoutY="34.0" prefHeight="20.0" prefWidth="513.0" text="Here are your students in _____">
+      <Label fx:id="lblWelcomeMessage" alignment="CENTER" layoutX="20.0" layoutY="32.0" prefHeight="20.0" prefWidth="513.0" text="Here are your students in _____">
          <font>
             <Font size="14.0" />
          </font></Label>
